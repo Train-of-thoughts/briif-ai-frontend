@@ -1,4 +1,4 @@
-.loginPage {
+.signupPage {
   --brand-primary: #6366f1;
   --brand-primary-hover: #5855eb;
   --google-hover: #f8f9fa;
@@ -17,7 +17,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .loginPage {
+  .signupPage {
     --google-hover: #2d3748;
     --input-border: #374151;
     --input-border-focus: #6366f1;
@@ -27,12 +27,12 @@
   }
 }
 
-.loginMain {
+.signupMain {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
 }
 
-.loginContainer {
+.signupContainer {
   background: var(--background);
   border-radius: 16px;
   padding: 40px;
@@ -41,7 +41,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .loginContainer {
+  .signupContainer {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 }
@@ -49,17 +49,17 @@
 .logoContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, var(--brand-primary), #8b5cf6);
-  border-radius: 16px;
+  border-radius: 12px;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
@@ -69,25 +69,25 @@
 }
 
 .logoText {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: white;
   letter-spacing: -0.02em;
 }
 
 .title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--foreground);
   text-align: center;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--text-secondary);
   text-align: center;
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
 }
 
 .googleButton {
@@ -142,10 +142,10 @@
   z-index: 1;
 }
 
-.loginForm {
+.signupForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -180,7 +180,7 @@
   color: var(--text-secondary);
 }
 
-.loginButton {
+.signupButton {
   width: 100%;
   padding: 14px;
   background: var(--brand-primary);
@@ -191,9 +191,10 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  margin-top: 4px;
 }
 
-.loginButton:hover {
+.signupButton:hover {
   background: var(--brand-primary-hover);
 }
 
@@ -218,20 +219,25 @@
 }
 
 @media (max-width: 480px) {
-  .loginContainer {
+  .signupContainer {
     padding: 32px 24px;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .logo {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
   }
 
   .logoText {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .googleButton {
+    padding: 10px;
+    font-size: 15px;
   }
 }

@@ -1,19 +1,21 @@
 import Link from "next/link";
-import styles from "./login.module.css";
+import styles from "./signup.module.css";
 
-export default function Login() {
+export default function Signup() {
   return (
-    <div className={styles.loginPage}>
-      <main className={styles.loginMain}>
-        <div className={styles.loginContainer}>
+    <div className={styles.signupPage}>
+      <main className={styles.signupMain}>
+        <div className={styles.signupContainer}>
           <div className={styles.logoContainer}>
             <Link href="/" className={styles.logo}>
               <span className={styles.logoText}>BriffAI</span>
             </Link>
           </div>
 
-          <h1 className={styles.title}>Welcome Back</h1>
-          <p className={styles.subtitle}>Sign in to your account</p>
+          <h1 className={styles.title}>Create Account</h1>
+          <p className={styles.subtitle}>
+            Join Briff.ai and make SMM great again
+          </p>
 
           <button className={styles.googleButton}>
             <svg
@@ -46,7 +48,21 @@ export default function Login() {
             <span className={styles.dividerText}>or</span>
           </div>
 
-          <form className={styles.loginForm}>
+          <form className={styles.signupForm}>
+            <div className={styles.inputGroup}>
+              <label htmlFor="name" className={styles.label}>
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className={styles.input}
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
             <div className={styles.inputGroup}>
               <label htmlFor="email" className={styles.label}>
                 Email
@@ -70,21 +86,35 @@ export default function Login() {
                 id="password"
                 name="password"
                 className={styles.input}
-                placeholder="Enter your password"
+                placeholder="Create a password"
                 required
               />
             </div>
 
-            <button type="submit" className={styles.loginButton}>
-              Sign In
+            <div className={styles.inputGroup}>
+              <label htmlFor="confirmPassword" className={styles.label}>
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                className={styles.input}
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+
+            <button type="submit" className={styles.signupButton}>
+              Create Account
             </button>
           </form>
 
           <div className={styles.footer}>
             <p className={styles.footerText}>
-              Don't have an account?{" "}
-              <Link href="/signup" className={styles.link}>
-                Sign up
+              Already have an account?{" "}
+              <Link href="/login" className={styles.link}>
+                Sign in
               </Link>
             </p>
           </div>
