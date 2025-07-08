@@ -7,13 +7,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
   const commonModule = await import(`./labels/common/${locale}.ts`);
-  const homeModule = await import(`./labels/dashboard/${locale}.ts`);
 
   return {
     locale,
     messages: {
       common: commonModule.default,
-      dashboard: homeModule.default,
     },
   };
 });
