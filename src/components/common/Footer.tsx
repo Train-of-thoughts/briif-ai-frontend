@@ -1,4 +1,7 @@
+import logoIcon from '/public/icons/logo/logo-dark-text-left-transparent.svg'
+
 import Image from "next/image";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Footer() {
   return (
@@ -7,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col items-center">
           <div className="mb-8">
             <Image
-              src='/icons/logo/logo-dark-text-left-transparent.svg'
+              src={logoIcon}
               alt="Briff.ai Logo"
               className="h-[50px] w-[100px] md:w-[150px] object-cover object-center"
               width={150}
@@ -20,6 +23,12 @@ export default function Footer() {
             <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Pricing</a>
             <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">Contact</a>
           </div>
+
+          {/* Language Switcher */}
+          <div className="mb-8">
+            <LanguageSwitcher />
+          </div>
+
           <div className="text-center">
             <p className="text-gray-500">
               © {new Date().getFullYear()} Briff.ai. All rights reserved.

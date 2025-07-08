@@ -1,3 +1,5 @@
+import logoIcon from "/public/icons/logo/logo-dark-favicon-transparent.svg"
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -9,7 +11,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/icons/logo/logo-dark-favicon-transparent.svg"
+                src={logoIcon}
                 alt="Briff.ai Logo" 
                 className="w-10 md:w-12 h-10 md:h-12 object-cover object-center]"
                 width={100}
