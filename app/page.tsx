@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { ArrowRightIcon, BoltIcon, ChartBarIcon, CalendarIcon, CheckIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import ParticleBackground from "./components/ParticleBackground";
 
 export default function Home() {
   return (
     <main className="pt-24">
       {/* Hero Section */}
-      <section id="hero" className="container-section flex flex-col items-center justify-center min-h-[90vh] text-center">
-        <div className="max-w-4xl mx-auto">
+      <section id="hero" className="container-section flex flex-col items-center justify-center min-h-[90vh] text-center relative overflow-hidden">
+        <ParticleBackground />
+        <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-linear-[to_right,#8b5cf6_0%,#c4b5fd_100%] bg-clip-text text-transparent">
             Briff.ai - Make SMM Great Again
           </h1>

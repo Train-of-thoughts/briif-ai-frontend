@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b44326e-2d28-42bc-8c0b-8bdb93b99b62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-favicon-transparent.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-full-transparent.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-full.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-text-bottom-transparent.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-text-bottom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-text-left-transparent.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-dark-text-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-full.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-text-bottom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-text-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-transparent-favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-transparent-full.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-transparent-text-bottom.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/logo/logo-transparent-text-left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -40,21 +24,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "viktor-kindrat"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;viktor-kindrat&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Train-of-thoughts/briif-ai-frontend.git",
-    "accountId": "9f4f5b01-9ac7-4f9b-92ff-910b725cee31"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Train-of-thoughts/briif-ai-frontend.git&quot;,
+    &quot;accountId&quot;: &quot;9f4f5b01-9ac7-4f9b-92ff-910b725cee31&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2zYlSZjsTyIY5mSylL9CuylE1UV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/auth",
+    "git-widget-placeholder": "#2 on feature/auth",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -116,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751915887614</updated>
-      <workItem from="1751915888831" duration="7089000" />
+      <workItem from="1751915888831" duration="8084000" />
+      <workItem from="1751995249464" duration="684000" />
     </task>
     <servers />
   </component>
