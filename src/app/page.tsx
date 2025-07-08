@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRightIcon, BoltIcon, ChartBarIcon, CalendarIcon, CheckIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import ParticleBackground from "./components/ParticleBackground";
+import ParticleBackground from "@/components/ParticleBackground";
 
 export default function Home() {
   return (

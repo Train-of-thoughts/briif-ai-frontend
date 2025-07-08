@@ -28,7 +28,7 @@
 }
 
 :root {
-    --background: var(--color-neutral-900);
+    --background: var(--color-neutral-800);
     --foreground: var(--color-neutral-100);
 }
 
