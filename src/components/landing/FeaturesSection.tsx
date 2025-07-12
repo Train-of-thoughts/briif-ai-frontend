@@ -1,12 +1,15 @@
 import { BoltIcon, ChartBarIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from 'next-intl';
 
 export default function FeaturesSection() {
+  const t = useTranslations('landing.features');
+
   return (
     <section id="features" className="container-section bg-gray-900">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-linear-[to_right,#a78bfa_0%,#7c3aed_100%] bg-clip-text text-transparent">Powerful Features</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-linear-[to_right,#a78bfa_0%,#7c3aed_100%] bg-clip-text text-transparent">{t('title')}</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Discover how Briff.ai can revolutionize your social media strategy
+          {t('description')}
         </p>
       </div>
 
@@ -15,9 +18,9 @@ export default function FeaturesSection() {
           <div className="w-16 h-16 bg-linear-[to_bottom_right,#7c3aed_0%,#a78bfa_100%] rounded-full flex items-center justify-center mb-6">
             <BoltIcon className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-white">AI-Powered Content Creation</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-white">{t('aiContent.title')}</h3>
           <p className="text-gray-300">
-            Generate engaging social media content in seconds with our advanced AI algorithms tailored to your brand voice.
+            {t('aiContent.description')}
           </p>
         </div>
 
@@ -25,9 +28,9 @@ export default function FeaturesSection() {
           <div className="w-16 h-16 bg-linear-[to_bottom_right,#7c3aed_0%,#a78bfa_100%] rounded-full flex items-center justify-center mb-6">
             <ChartBarIcon className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-white">Smart Analytics</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-white">{t('analytics.title')}</h3>
           <p className="text-gray-300">
-            Track performance metrics and gain valuable insights to optimize your social media campaigns for maximum impact.
+            {t('analytics.description')}
           </p>
         </div>
 
@@ -35,9 +38,9 @@ export default function FeaturesSection() {
           <div className="w-16 h-16 bg-linear-[to_bottom_right,#7c3aed_0%,#a78bfa_100%] rounded-full flex items-center justify-center mb-6">
             <CalendarIcon className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-white">Automated Scheduling</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-white">{t('scheduling.title')}</h3>
           <p className="text-gray-300">
-            Plan and schedule your content across multiple platforms with our intuitive calendar interface for consistent posting.
+            {t('scheduling.description')}
           </p>
         </div>
       </div>

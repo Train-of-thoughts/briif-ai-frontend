@@ -1,15 +1,28 @@
-export default {
-  add: "Přidat",
-  edit: "Upravit",
-  delete: "Smazat",
-  save: "Uložit",
-  cancel: "Zrušit",
-  confirm: "Potvrdit",
-  back: "Zpět",
-  next: "Další",
-  loading: "Načítání...",
-  error: "Chyba",
-  success: "Úspěch",
-  welcome: "Vítejte v Briff.ai",
-  description: "Briff.ai je platforma, která vám pomůže znovu vylepšit váš marketing na sociálních sítích."
+const csCommon = {
+  // Header
+  header: {
+    home: "Domů",
+    features: "Funkce",
+    about: "O nás",
+    login: "Přihlásit se",
+    signUp: "Registrovat se"
+  },
+
+  // Footer
+  footer: {
+    about: "O nás",
+    features: "Funkce",
+    pricing: "Ceník",
+    contact: "Kontakt",
+    allRightsReserved: "Všechna práva vyhrazena"
+  },
+
+  // Common buttons and actions
+  actions: {
+    getStarted: "Začít",
+    requestDemo: "Vyžádat demo",
+    learnMore: "Zjistit více"
+  }
 };
+
+export default csCommon;

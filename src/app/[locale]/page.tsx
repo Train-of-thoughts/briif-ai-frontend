@@ -6,7 +6,7 @@ import AboutSection from "@/components/landing/AboutSection";
 
 export default function Home() {
   return (
-    <main className="pt-24">
+    <main className="pt-16 sm:pt-20 md:pt-24">
       <Header />
       <HeroSection />
       <FeaturesSection />
@@ -15,4 +15,3 @@ export default function Home() {
     </main>
   );
 }
-

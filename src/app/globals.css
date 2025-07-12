@@ -260,7 +260,7 @@ main {
 }
 
 .container-section {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -268,6 +268,18 @@ main {
     align-items: center;
     justify-content: center;
     background-color: transparent;
+}
+
+@media (min-width: 640px) {
+    .container-section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-section {
+        padding: 4rem 2rem;
+    }
 }
 
 .btn-primary {

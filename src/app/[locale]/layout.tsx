@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from '@/lib/get-messages';
-import { locales, defaultLocale } from '@/i18n';
+import { locales, defaultLocale, isValidLocale } from '@/i18n';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +33,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const {locale} = await params;
-  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
+  const validLocale = isValidLocale(locale) ? locale : defaultLocale;
   const messages = await getMessages(validLocale);
 
   return (
