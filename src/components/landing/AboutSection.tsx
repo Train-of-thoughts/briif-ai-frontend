@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
+import {Link} from "@/i18n/navigation";
 
 export default function AboutSection() {
   const t = useTranslations("landing.about");

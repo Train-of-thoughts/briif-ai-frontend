@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useAuth } from "@/hooks/useAuth";
 import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import {Link, useRouter} from "@/i18n/navigation";
 
 const DesktopNavigation: React.FC = () => {
   const t = useTranslations("common");

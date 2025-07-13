@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import {useRouter} from "@/i18n/navigation";
 
 export default function Callback() {
   const router = useRouter();
@@ -34,8 +35,8 @@ export default function Callback() {
         if (!response.ok) {
           throw new Error(t("callback.storeFailed"));
         }
-        // Redirect to home page
-        router.push("/");
+        // Redirect to dashboard
+        router.push("/dashboard");
       })
       .catch((err) => {
         console.error("Error storing token:", err);

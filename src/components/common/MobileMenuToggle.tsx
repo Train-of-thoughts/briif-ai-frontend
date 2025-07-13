@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 
 const MobileMenuToggle: React.FC = () => {
   const t = useTranslations("common");

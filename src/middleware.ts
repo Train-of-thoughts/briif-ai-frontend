@@ -44,8 +44,6 @@ export default async function middleware(request: NextRequest) {
     return fullUrl.startsWith(routeWithOrigin + "?");
   });
 
-  console.log(isPublicRoute, pathname);
-
   // If it's not a public route, check for authentication
   if (!isPublicRoute) {
     const hasToken = await hasAuthToken();

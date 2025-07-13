@@ -1,10 +1,10 @@
 import logoIcon from "/public/icons/logo/logo-dark-favicon-transparent.svg";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import MobileMenuToggle from "./MobileMenuToggle";
 import DesktopNavigation from "./DesktopNavigation";
+import {Link} from "@/i18n/navigation";
 
 export default function Header() {
   const t = useTranslations("common");

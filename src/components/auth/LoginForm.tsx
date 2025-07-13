@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 
 import FormInput from "@/components/common/FormInput";
 import FormDivider from "@/components/common/FormDivider";
@@ -14,6 +13,7 @@ import AuthCard from "@/components/auth/AuthCard";
 import AuthFooter from "@/components/auth/AuthFooter";
 import { getLoginSchema, LoginFormData } from "@/schema/auth/login-schema";
 import { useAuth } from "@/hooks/useAuth";
+import {useRouter} from "@/i18n/navigation";
 
 const LoginForm: React.FC = () => {
   const t = useTranslations("auth");

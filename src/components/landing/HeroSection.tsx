@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import ParticleBackground from "@/components/ParticleBackground";
 import { useTranslations } from "next-intl";
+import {Link} from "@/i18n/navigation";
 
 export default function HeroSection() {
   const t = useTranslations("landing.hero");

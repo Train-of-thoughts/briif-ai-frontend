@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { User, LoginCredentials, RegisterCredentials } from "@/lib/auth/types";
+import {useRouter} from "@/i18n/navigation";
 
 // Define the auth state type
 interface AuthState {
