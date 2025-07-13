@@ -14,7 +14,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     // Set the token in a cookie
-    cookies().set("auth_token", token, {
+    const cookieStore = await cookies();
+    cookieStore.set("auth_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       maxAge: 60 * 60 * 24, // 1 day
