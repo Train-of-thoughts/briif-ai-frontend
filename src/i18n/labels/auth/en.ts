@@ -51,6 +51,16 @@ const enAuth = {
     passwordRequiresNumber: "Password must include at least one number",
     passwordRequiresSpecial: "Password must include at least one special character",
     passwordsDoNotMatch: "Passwords do not match"
+  },
+
+  // Auth callback page
+  callback: {
+    processing: "Processing authentication",
+    pleaseWait: "Please wait while we authenticate you...",
+    error: "Authentication Error",
+    noToken: "No authentication token found",
+    storeFailed: "Failed to store authentication token",
+    genericError: "An error occurred during authentication"
   }
 };
 

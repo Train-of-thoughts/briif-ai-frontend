@@ -51,6 +51,16 @@ const ukAuth = {
     passwordRequiresNumber: "Пароль має містити щонайменше одну цифру",
     passwordRequiresSpecial: "Пароль має містити щонайменше один спеціальний символ",
     passwordsDoNotMatch: "Паролі не співпадають"
+  },
+
+  // Auth callback page
+  callback: {
+    processing: "Обробка автентифікації",
+    pleaseWait: "Будь ласка, зачекайте, поки ми вас автентифікуємо...",
+    error: "Помилка автентифікації",
+    noToken: "Не знайдено токен автентифікації",
+    storeFailed: "Не вдалося зберегти токен автентифікації",
+    genericError: "Під час автентифікації сталася помилка"
   }
 };
 

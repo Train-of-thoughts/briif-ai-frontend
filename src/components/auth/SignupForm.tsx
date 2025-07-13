@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 import FormInput from "@/components/common/FormInput";
 import FormDivider from "@/components/common/FormDivider";
@@ -13,10 +14,14 @@ import PhoneInput from "@/components/common/PhoneInput";
 import AuthCard from "@/components/auth/AuthCard";
 import AuthFooter from "@/components/auth/AuthFooter";
 import { getSignupSchema, SignupFormData } from "@/schema/auth/signup-schema";
+import { useAuth } from "@/hooks/useAuth";
 
 const SignupForm: React.FC = () => {
   const t = useTranslations('auth');
+  const router = useRouter();
+  const { register: registerUser } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   // Get validation schema
   const signupSchema = getSignupSchema(t);
@@ -38,17 +43,39 @@ const SignupForm: React.FC = () => {
   // Form submission handler
   const onSubmit: SubmitHandler<SignupFormData> = async (data) => {
     setIsSubmitting(true);
+    setAuthError(null);
+
     try {
-      // Here you would typically call your API to register the user
-      console.log("Form submitted:", data);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      // Handle successful registration (redirect, etc.)
+      const result = await registerUser({
+        email: data.email,
+        password: data.password,
+        firstName: data.firstName,
+        lastName: data.lastName
+      });
+
+      if (result.success) {
+        // Redirect to dashboard or home page after successful registration
+        router.push('/');
+      } else {
+        setAuthError(result.error || t('signup.genericError'));
+      }
     } catch (error) {
       console.error("Registration error:", error);
+      setAuthError(
+        error instanceof Error 
+          ? error.message 
+          : t('signup.genericError')
+      );
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Google login handler
+  const handleGoogleLogin = () => {
+    // Redirect directly to backend's Google OAuth endpoint
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+    window.location.href = `${apiUrl}/auth/google`;
   };
 
   return (
@@ -121,6 +148,12 @@ const SignupForm: React.FC = () => {
             name="confirmPassword"
             error={errors.confirmPassword?.message}
           />
+
+          {authError && (
+            <div className="text-red-500 text-sm mt-2">
+              {authError}
+            </div>
+          )}
         </div>
 
         <SubmitButton
@@ -131,7 +164,10 @@ const SignupForm: React.FC = () => {
 
         <FormDivider text={t('signup.or')} />
 
-        <GoogleAuthButton text={t('signup.googleSignup')} />
+        <GoogleAuthButton 
+          text={t('signup.googleSignup')} 
+          onClick={handleGoogleLogin}
+        />
 
         <AuthFooter 
           text={t('signup.haveAccount')}

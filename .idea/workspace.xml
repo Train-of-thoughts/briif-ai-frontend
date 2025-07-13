@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b44326e-2d28-42bc-8c0b-8bdb93b99b62" name="Changes" comment="" />
+    <list default="true" id="3b44326e-2d28-42bc-8c0b-8bdb93b99b62" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#2 on feature/auth&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
@@ -109,6 +111,7 @@
       <workItem from="1751995249464" duration="3000000" />
       <workItem from="1751999779329" duration="4506000" />
       <workItem from="1752309192610" duration="5806000" />
+      <workItem from="1752402205776" duration="699000" />
     </task>
     <servers />
   </component>

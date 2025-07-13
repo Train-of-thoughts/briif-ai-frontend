@@ -51,6 +51,16 @@ const csAuth = {
     passwordRequiresNumber: "Heslo musí obsahovat alespoň jednu číslici",
     passwordRequiresSpecial: "Heslo musí obsahovat alespoň jeden speciální znak",
     passwordsDoNotMatch: "Hesla se neshodují"
+  },
+
+  // Auth callback page
+  callback: {
+    processing: "Zpracování autentizace",
+    pleaseWait: "Počkejte prosím, probíhá autentizace...",
+    error: "Chyba autentizace",
+    noToken: "Nebyl nalezen autentizační token",
+    storeFailed: "Nepodařilo se uložit autentizační token",
+    genericError: "Během autentizace došlo k chybě"
   }
 };
 
