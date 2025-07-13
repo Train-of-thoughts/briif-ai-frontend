@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 import MobileMenuToggle from "./MobileMenuToggle";
+import DesktopNavigation from "./DesktopNavigation";
 
 export default function Header() {
   const t = useTranslations('common');
@@ -36,14 +37,7 @@ export default function Header() {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-6">
-            <Link href="/login" className="text-gray-300 hover:text-primary-400 transition-colors">
-              {t('header.login')}
-            </Link>
-            <Link href="/signup" className="btn-primary">
-              {t('header.signUp')}
-            </Link>
-          </div>
+          <DesktopNavigation />
 
           {/* Mobile menu (client component) */}
           <MobileMenuToggle />

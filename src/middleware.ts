@@ -10,32 +10,49 @@ const i18nMiddleware = createMiddleware({
 });
 
 // Define public routes that don't require authentication
-const publicRoutes = [
-  '/',
-  '/login',
-  '/signup',
-  '/forgot-password',
-  '/reset-password',
-  '/auth/callback',
-  '/callback',
-];
+const publicRoutes = I18N_LOCALES.flatMap(locale => [
+    `/${locale}`,
+    `/${locale}/login`,
+    `/${locale}/signup`,
+    `/${locale}/forgot-password`,
+    `/${locale}/reset-password`,
+    `/${locale}/auth/callback`,
+    `/${locale}/callback`,
+]).concat(["/", "/callback"]);
 
 // Define the middleware handler
 export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // If accessing the root path, redirect to the default locale
+  if (pathname === '/') {
+    const url = new URL(`/${I18N_DEFAULT_LOCALE}`, request.url);
+    return NextResponse.redirect(url);
+  }
+
   // Check if the route is public
-  const isPublicRoute = publicRoutes.some(route => 
-    pathname.endsWith(route)
-  );
+  // Get the full URL including search params
+  const fullUrl = request.nextUrl.toString();
+
+  const isPublicRoute = publicRoutes.some(route => {
+    // Check if the pathname matches the route exactly
+    if (pathname === route) return true;
+
+    // Check if the URL starts with the route followed by a question mark (search params)
+    // This handles cases where search params are present in the URL
+    const routeWithOrigin = new URL(route, request.nextUrl.origin).toString();
+    return fullUrl.startsWith(routeWithOrigin + '?');
+  });
+
+  console.log(isPublicRoute, pathname)
 
   // If it's not a public route, check for authentication
   if (!isPublicRoute) {
     const hasToken = await hasAuthToken();
 
-    // If not authenticated, redirect to login
+    // If not authenticated, redirect to login with default locale
     if (!hasToken) {
-      const url = new URL('/login', request.url);
+      const url = new URL(`/${I18N_DEFAULT_LOCALE}/login`, request.url);
       return NextResponse.redirect(url);
     }
   }

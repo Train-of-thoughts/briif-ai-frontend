@@ -34,8 +34,7 @@ export default function AuthCallback() {
         if (!response.ok) {
           throw new Error(t('callback.storeFailed'));
         }
-        // Redirect to home page
-        router.push('/');
+        router.push('/dashboard');
       })
       .catch((err) => {
         console.error('Error storing token:', err);

@@ -5,7 +5,9 @@ const ukCommon = {
     features: "Можливості",
     about: "Про нас",
     login: "Увійти",
-    signUp: "Зареєструватися"
+    signUp: "Зареєструватися",
+    dashboard: "Панель керування",
+    logout: "Вийти"
   },
 
   // Footer
@@ -22,6 +24,16 @@ const ukCommon = {
     getStarted: "Почати",
     requestDemo: "Запросити демо",
     learnMore: "Дізнатися більше"
+  },
+
+  // Dashboard
+  dashboard: {
+    title: "Панель керування",
+    userProfile: "Профіль користувача",
+    email: "Електронна пошта",
+    firstName: "Ім'я",
+    lastName: "Прізвище",
+    userId: "ID користувача"
   }
 };
 

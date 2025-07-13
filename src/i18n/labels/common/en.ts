@@ -5,7 +5,9 @@ const enCommon = {
     features: "Features",
     about: "About",
     login: "Login",
-    signUp: "Sign Up"
+    signUp: "Sign Up",
+    dashboard: "Dashboard",
+    logout: "Logout"
   },
 
   // Footer
@@ -22,6 +24,16 @@ const enCommon = {
     getStarted: "Get Started",
     requestDemo: "Request Demo",
     learnMore: "Learn More"
+  },
+
+  // Dashboard
+  dashboard: {
+    title: "Dashboard",
+    userProfile: "User Profile",
+    email: "Email",
+    firstName: "First Name",
+    lastName: "Last Name",
+    userId: "User ID"
   }
 };
 

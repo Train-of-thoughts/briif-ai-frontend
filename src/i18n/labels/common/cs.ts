@@ -5,7 +5,9 @@ const csCommon = {
     features: "Funkce",
     about: "O nás",
     login: "Přihlásit se",
-    signUp: "Registrovat se"
+    signUp: "Registrovat se",
+    dashboard: "Nástěnka",
+    logout: "Odhlásit se"
   },
 
   // Footer
@@ -22,6 +24,16 @@ const csCommon = {
     getStarted: "Začít",
     requestDemo: "Vyžádat demo",
     learnMore: "Zjistit více"
+  },
+
+  // Dashboard
+  dashboard: {
+    title: "Nástěnka",
+    userProfile: "Profil uživatele",
+    email: "E-mail",
+    firstName: "Jméno",
+    lastName: "Příjmení",
+    userId: "ID uživatele"
   }
 };
 

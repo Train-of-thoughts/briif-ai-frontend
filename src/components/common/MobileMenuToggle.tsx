@@ -4,13 +4,27 @@ import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from 'next-intl';
 import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 
 const MobileMenuToggle: React.FC = () => {
   const t = useTranslations('common');
+  const { isLoggedIn, user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    setMobileMenuOpen(false);
+  };
+
+  const handleDashboardClick = () => {
+    router.push('/dashboard');
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -57,20 +71,42 @@ const MobileMenuToggle: React.FC = () => {
               {t('header.about')}
             </a>
             <div className="pt-2 flex flex-col space-y-3">
-              <Link 
-                href="/login" 
-                className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400"
-                onClick={toggleMobileMenu}
-              >
-                {t('header.login')}
-              </Link>
-              <Link 
-                href="/signup" 
-                className="block w-full text-center py-2 text-base font-medium btn-primary"
-                onClick={toggleMobileMenu}
-              >
-                {t('header.signUp')}
-              </Link>
+              {isLoggedIn ? (
+                <>
+                  <div className="block w-full text-center py-2 text-base font-medium btn-primary">
+                    {user?.firstName || user?.email}
+                  </div>
+                  <button
+                    onClick={handleDashboardClick}
+                    className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400 bg-neutral-800"
+                  >
+                    {t('header.dashboard')}
+                  </button>
+                  <button
+                    onClick={handleLogout}
+                    className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400 bg-neutral-800"
+                  >
+                    {t('header.logout')}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link 
+                    href="/login" 
+                    className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400"
+                    onClick={toggleMobileMenu}
+                  >
+                    {t('header.login')}
+                  </Link>
+                  <Link 
+                    href="/signup" 
+                    className="block w-full text-center py-2 text-base font-medium btn-primary"
+                    onClick={toggleMobileMenu}
+                  >
+                    {t('header.signUp')}
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
