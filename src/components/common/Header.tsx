@@ -1,13 +1,13 @@
-import logoIcon from "/public/icons/logo/logo-dark-favicon-transparent.svg"
+import logoIcon from "/public/icons/logo/logo-dark-favicon-transparent.svg";
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import MobileMenuToggle from "./MobileMenuToggle";
 import DesktopNavigation from "./DesktopNavigation";
 
 export default function Header() {
-  const t = useTranslations('common');
+  const t = useTranslations("common");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-500 bg-opacity-10 backdrop-blur-sm border-b border-gray-800">
@@ -24,14 +24,23 @@ export default function Header() {
               />
             </Link>
             <nav className="hidden md:ml-12 md:flex md:space-x-10">
-              <Link href={'/#here'} className="text-gray-300 hover:text-primary-400 transition-colors">
-                {t('header.home')}
+              <Link
+                href={"/#here"}
+                className="text-gray-300 hover:text-primary-400 transition-colors"
+              >
+                {t("header.home")}
               </Link>
-              <Link href='/#features' className="text-gray-300 hover:text-primary-400 transition-colors">
-                {t('header.features')}
+              <Link
+                href="/#features"
+                className="text-gray-300 hover:text-primary-400 transition-colors"
+              >
+                {t("header.features")}
               </Link>
-              <Link href='/#about' className="text-gray-300 hover:text-primary-400 transition-colors">
-                {t('header.about')}
+              <Link
+                href="/#about"
+                className="text-gray-300 hover:text-primary-400 transition-colors"
+              >
+                {t("header.about")}
               </Link>
             </nav>
           </div>

@@ -12,7 +12,7 @@ const ukAuth = {
     googleLogin: "Увійти через Google",
     noAccount: "Немає облікового запису?",
     signUp: "Зареєструватися",
-    forgotPassword: "Забули пароль?"
+    forgotPassword: "Забули пароль?",
   },
 
   // Signup page
@@ -30,7 +30,8 @@ const ukAuth = {
     optional: "необов'язково",
     password: "Пароль",
     passwordPlaceholder: "Створіть надійний пароль",
-    passwordRequirements: "Має містити щонайменше 8 символів, літери, цифри та спеціальні символи",
+    passwordRequirements:
+      "Має містити щонайменше 8 символів, літери, цифри та спеціальні символи",
     confirmPassword: "Підтвердження паролю",
     confirmPasswordPlaceholder: "Підтвердіть ваш пароль",
     submit: "Створити обліковий запис",
@@ -38,7 +39,7 @@ const ukAuth = {
     or: "або",
     googleSignup: "Зареєструватися через Google",
     haveAccount: "Вже маєте обліковий запис?",
-    login: "Увійти"
+    login: "Увійти",
   },
 
   // Validation messages
@@ -49,8 +50,9 @@ const ukAuth = {
     passwordTooShort: "Пароль має містити щонайменше 8 символів",
     passwordRequiresLetter: "Пароль має містити щонайменше одну літеру",
     passwordRequiresNumber: "Пароль має містити щонайменше одну цифру",
-    passwordRequiresSpecial: "Пароль має містити щонайменше один спеціальний символ",
-    passwordsDoNotMatch: "Паролі не співпадають"
+    passwordRequiresSpecial:
+      "Пароль має містити щонайменше один спеціальний символ",
+    passwordsDoNotMatch: "Паролі не співпадають",
   },
 
   // Auth callback page
@@ -60,8 +62,8 @@ const ukAuth = {
     error: "Помилка автентифікації",
     noToken: "Не знайдено токен автентифікації",
     storeFailed: "Не вдалося зберегти токен автентифікації",
-    genericError: "Під час автентифікації сталася помилка"
-  }
+    genericError: "Під час автентифікації сталася помилка",
+  },
 };
 
 export default ukAuth;

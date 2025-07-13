@@ -17,8 +17,8 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   className = "",
 }) => {
   return (
-    <button 
-      type="submit" 
+    <button
+      type="submit"
       className={`btn-primary w-full py-3 ${className}`}
       disabled={isSubmitting}
     >

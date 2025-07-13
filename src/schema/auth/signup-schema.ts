@@ -13,25 +13,19 @@ export type SignupFormData = {
 
 export const getSignupSchema = (t: (key: string) => string) => {
   return yup.object().shape({
-    firstName: yup
-      .string()
-      .required(t('validation.required')),
-    lastName: yup
-      .string()
-      .required(t('validation.required')),
+    firstName: yup.string().required(t("validation.required")),
+    lastName: yup.string().required(t("validation.required")),
     email: yup
       .string()
-      .required(t('validation.required'))
-      .email(t('validation.invalidEmail')),
-    countryCode: yup
-      .string()
-      .required(t('validation.required')),
+      .required(t("validation.required"))
+      .email(t("validation.invalidEmail")),
+    countryCode: yup.string().required(t("validation.required")),
     phone: yup
       .string()
       .optional()
       .nullable()
       .transform((value) => (value === "" ? null : value))
-      .test('phone-format', t('validation.invalidPhone'), function(value) {
+      .test("phone-format", t("validation.invalidPhone"), function (value) {
         if (!value) return true; // Optional field
 
         try {
@@ -49,14 +43,14 @@ export const getSignupSchema = (t: (key: string) => string) => {
       }),
     password: yup
       .string()
-      .required(t('validation.required'))
-      .min(8, t('validation.passwordTooShort'))
-      .matches(/[a-zA-Z]/, t('validation.passwordRequiresLetter'))
-      .matches(/[0-9]/, t('validation.passwordRequiresNumber'))
-      .matches(/[^a-zA-Z0-9]/, t('validation.passwordRequiresSpecial')),
+      .required(t("validation.required"))
+      .min(8, t("validation.passwordTooShort"))
+      .matches(/[a-zA-Z]/, t("validation.passwordRequiresLetter"))
+      .matches(/[0-9]/, t("validation.passwordRequiresNumber"))
+      .matches(/[^a-zA-Z0-9]/, t("validation.passwordRequiresSpecial")),
     confirmPassword: yup
       .string()
-      .required(t('validation.required'))
-      .oneOf([yup.ref('password')], t('validation.passwordsDoNotMatch'))
+      .required(t("validation.required"))
+      .oneOf([yup.ref("password")], t("validation.passwordsDoNotMatch")),
   });
 };

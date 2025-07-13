@@ -1,11 +1,11 @@
-import logoIcon from '/public/icons/logo/logo-dark-text-left-transparent.svg'
+import logoIcon from "/public/icons/logo/logo-dark-text-left-transparent.svg";
 
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
-  const t = useTranslations('common');
+  const t = useTranslations("common");
 
   return (
     <footer className="bg-gray-900 py-12 sm:py-16 border-t border-gray-800">
@@ -23,10 +23,30 @@ export default function Footer() {
 
           {/* Footer links - stack on mobile, row on larger screens */}
           <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 mb-8 sm:mb-10 items-center">
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.about')}</a>
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.features')}</a>
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.pricing')}</a>
-            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">{t('footer.contact')}</a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-400 transition-colors"
+            >
+              {t("footer.about")}
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-400 transition-colors"
+            >
+              {t("footer.features")}
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-400 transition-colors"
+            >
+              {t("footer.pricing")}
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-400 transition-colors"
+            >
+              {t("footer.contact")}
+            </a>
           </div>
 
           {/* Language Switcher */}
@@ -36,7 +56,8 @@ export default function Footer() {
 
           <div className="text-center">
             <p className="text-gray-500 text-sm sm:text-base">
-              © {new Date().getFullYear()} Briff.ai. {t('footer.allRightsReserved')}
+              © {new Date().getFullYear()} Briff.ai.{" "}
+              {t("footer.allRightsReserved")}
             </p>
           </div>
         </div>

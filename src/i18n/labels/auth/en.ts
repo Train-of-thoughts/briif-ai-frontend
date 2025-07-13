@@ -12,7 +12,7 @@ const enAuth = {
     googleLogin: "Login with Google",
     noAccount: "Don't have an account?",
     signUp: "Sign up",
-    forgotPassword: "Forgot password?"
+    forgotPassword: "Forgot password?",
   },
 
   // Signup page
@@ -30,7 +30,8 @@ const enAuth = {
     optional: "optional",
     password: "Password",
     passwordPlaceholder: "Create a strong password",
-    passwordRequirements: "Must be at least 8 characters with letters, numbers, and special characters",
+    passwordRequirements:
+      "Must be at least 8 characters with letters, numbers, and special characters",
     confirmPassword: "Confirm Password",
     confirmPasswordPlaceholder: "Confirm your password",
     submit: "Create Account",
@@ -38,7 +39,7 @@ const enAuth = {
     or: "or",
     googleSignup: "Sign up with Google",
     haveAccount: "Already have an account?",
-    login: "Login"
+    login: "Login",
   },
 
   // Validation messages
@@ -49,8 +50,9 @@ const enAuth = {
     passwordTooShort: "Password must be at least 8 characters",
     passwordRequiresLetter: "Password must include at least one letter",
     passwordRequiresNumber: "Password must include at least one number",
-    passwordRequiresSpecial: "Password must include at least one special character",
-    passwordsDoNotMatch: "Passwords do not match"
+    passwordRequiresSpecial:
+      "Password must include at least one special character",
+    passwordsDoNotMatch: "Passwords do not match",
   },
 
   // Auth callback page
@@ -60,8 +62,8 @@ const enAuth = {
     error: "Authentication Error",
     noToken: "No authentication token found",
     storeFailed: "Failed to store authentication token",
-    genericError: "An error occurred during authentication"
-  }
+    genericError: "An error occurred during authentication",
+  },
 };
 
 export default enAuth;

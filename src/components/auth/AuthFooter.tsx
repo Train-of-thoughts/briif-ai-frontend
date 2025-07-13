@@ -9,10 +9,14 @@ type AuthFooterProps = {
   linkHref: string;
 };
 
-const AuthFooter: React.FC<AuthFooterProps> = ({ text, linkText, linkHref }) => {
+const AuthFooter: React.FC<AuthFooterProps> = ({
+  text,
+  linkText,
+  linkHref,
+}) => {
   return (
     <p className="text-sm text-gray-400 mt-4">
-      {text} {' '}
+      {text}{" "}
       <Link href={linkHref} className="text-primary-400 hover:text-primary-300">
         {linkText}
       </Link>

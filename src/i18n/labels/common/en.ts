@@ -7,7 +7,7 @@ const enCommon = {
     login: "Login",
     signUp: "Sign Up",
     dashboard: "Dashboard",
-    logout: "Logout"
+    logout: "Logout",
   },
 
   // Footer
@@ -16,14 +16,14 @@ const enCommon = {
     features: "Features",
     pricing: "Pricing",
     contact: "Contact",
-    allRightsReserved: "All rights reserved"
+    allRightsReserved: "All rights reserved",
   },
 
   // Common buttons and actions
   actions: {
     getStarted: "Get Started",
     requestDemo: "Request Demo",
-    learnMore: "Learn More"
+    learnMore: "Learn More",
   },
 
   // Dashboard
@@ -33,8 +33,8 @@ const enCommon = {
     email: "Email",
     firstName: "First Name",
     lastName: "Last Name",
-    userId: "User ID"
-  }
+    userId: "User ID",
+  },
 };
 
 export default enCommon;

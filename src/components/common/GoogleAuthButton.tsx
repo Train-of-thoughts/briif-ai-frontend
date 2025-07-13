@@ -7,10 +7,13 @@ type GoogleAuthButtonProps = {
   onClick?: () => void;
 };
 
-const GoogleAuthButton: React.FC<GoogleAuthButtonProps> = ({ text, onClick }) => {
+const GoogleAuthButton: React.FC<GoogleAuthButtonProps> = ({
+  text,
+  onClick,
+}) => {
   return (
-    <button 
-      type="button" 
+    <button
+      type="button"
       className="w-full py-3 px-4 border border-gray-700 rounded-md flex items-center justify-center space-x-2 hover:bg-neutral-800 transition-colors"
       onClick={onClick}
     >

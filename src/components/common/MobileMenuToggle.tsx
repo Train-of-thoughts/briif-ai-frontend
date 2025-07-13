@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 
 const MobileMenuToggle: React.FC = () => {
-  const t = useTranslations('common');
+  const t = useTranslations("common");
   const { isLoggedIn, user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
@@ -23,7 +23,7 @@ const MobileMenuToggle: React.FC = () => {
   };
 
   const handleDashboardClick = () => {
-    router.push('/dashboard');
+    router.push("/dashboard");
     setMobileMenuOpen(false);
   };
 
@@ -54,21 +54,21 @@ const MobileMenuToggle: React.FC = () => {
               className="block py-2 text-base font-medium text-gray-300 hover:text-primary-400"
               onClick={toggleMobileMenu}
             >
-              {t('header.home')}
+              {t("header.home")}
             </a>
             <a
               href="#features"
               className="block py-2 text-base font-medium text-gray-300 hover:text-primary-400"
               onClick={toggleMobileMenu}
             >
-              {t('header.features')}
+              {t("header.features")}
             </a>
             <a
               href="#about"
               className="block py-2 text-base font-medium text-gray-300 hover:text-primary-400"
               onClick={toggleMobileMenu}
             >
-              {t('header.about')}
+              {t("header.about")}
             </a>
             <div className="pt-2 flex flex-col space-y-3">
               {isLoggedIn ? (
@@ -80,30 +80,30 @@ const MobileMenuToggle: React.FC = () => {
                     onClick={handleDashboardClick}
                     className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400 bg-neutral-800"
                   >
-                    {t('header.dashboard')}
+                    {t("header.dashboard")}
                   </button>
                   <button
                     onClick={handleLogout}
                     className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400 bg-neutral-800"
                   >
-                    {t('header.logout')}
+                    {t("header.logout")}
                   </button>
                 </>
               ) : (
                 <>
-                  <Link 
-                    href="/login" 
+                  <Link
+                    href="/login"
                     className="block w-full text-center py-2 text-base font-medium text-gray-300 hover:text-primary-400"
                     onClick={toggleMobileMenu}
                   >
-                    {t('header.login')}
+                    {t("header.login")}
                   </Link>
-                  <Link 
-                    href="/signup" 
+                  <Link
+                    href="/signup"
                     className="block w-full text-center py-2 text-base font-medium btn-primary"
                     onClick={toggleMobileMenu}
                   >
-                    {t('header.signUp')}
+                    {t("header.signUp")}
                   </Link>
                 </>
               )}

@@ -8,14 +8,16 @@ type AuthLayoutProps = {
   className?: string;
 };
 
-const AuthLayout: React.FC<AuthLayoutProps> = ({ 
-  children, 
-  className = "" 
+const AuthLayout: React.FC<AuthLayoutProps> = ({
+  children,
+  className = "",
 }) => {
   return (
     <main className="pt-16 sm:pt-20 md:pt-24">
       <Header />
-      <section className={`container-section flex flex-col items-center justify-center min-h-[80vh] text-center relative overflow-hidden ${className}`}>
+      <section
+        className={`container-section flex flex-col items-center justify-center min-h-[80vh] text-center relative overflow-hidden ${className}`}
+      >
         <ParticleBackground />
         {children}
       </section>

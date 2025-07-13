@@ -7,7 +7,7 @@ const csCommon = {
     login: "Přihlásit se",
     signUp: "Registrovat se",
     dashboard: "Nástěnka",
-    logout: "Odhlásit se"
+    logout: "Odhlásit se",
   },
 
   // Footer
@@ -16,14 +16,14 @@ const csCommon = {
     features: "Funkce",
     pricing: "Ceník",
     contact: "Kontakt",
-    allRightsReserved: "Všechna práva vyhrazena"
+    allRightsReserved: "Všechna práva vyhrazena",
   },
 
   // Common buttons and actions
   actions: {
     getStarted: "Začít",
     requestDemo: "Vyžádat demo",
-    learnMore: "Zjistit více"
+    learnMore: "Zjistit více",
   },
 
   // Dashboard
@@ -33,8 +33,8 @@ const csCommon = {
     email: "E-mail",
     firstName: "Jméno",
     lastName: "Příjmení",
-    userId: "ID uživatele"
-  }
+    userId: "ID uživatele",
+  },
 };
 
 export default csCommon;

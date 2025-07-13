@@ -1,9 +1,9 @@
 // Server-side session management for authentication
 
-import { cache } from 'react';
-import { cookies } from 'next/headers';
-import { getCurrentUser } from './actions';
-import { Session, User } from './types';
+import { cache } from "react";
+import { cookies } from "next/headers";
+import { getCurrentUser } from "./actions";
+import { Session, User } from "./types";
 
 // Create a cached version of getCurrentUser to avoid multiple API calls
 const getUser = cache(async () => {
@@ -17,14 +17,14 @@ const getUser = cache(async () => {
 export const getSession = cache(async (): Promise<Session> => {
   try {
     const user = await getUser();
-    
+
     return {
       user,
       isLoggedIn: !!user,
       isLoading: false,
     };
   } catch (error) {
-    console.error('Error getting session:', error);
+    console.error("Error getting session:", error);
     return {
       user: null,
       isLoggedIn: false,
@@ -65,5 +65,5 @@ export async function getSessionUser(): Promise<User | null> {
  * This is a helper function that can be used in middleware
  */
 export async function hasAuthToken(): Promise<boolean> {
-  return !!(await cookies()).get('auth_token')?.value;
+  return !!(await cookies()).get("auth_token")?.value;
 }

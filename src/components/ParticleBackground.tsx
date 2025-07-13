@@ -9,7 +9,9 @@ interface ParticleBackgroundProps {
   className?: string;
 }
 
-export default function ParticleBackground({ className = "" }: ParticleBackgroundProps) {
+export default function ParticleBackground({
+  className = "",
+}: ParticleBackgroundProps) {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log("Initializing tsparticles");
     try {
@@ -20,9 +22,12 @@ export default function ParticleBackground({ className = "" }: ParticleBackgroun
     }
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log("Particles loaded:", container);
-  }, []);
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      console.log("Particles loaded:", container);
+    },
+    [],
+  );
 
   return (
     <Particles

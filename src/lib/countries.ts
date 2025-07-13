@@ -60,14 +60,16 @@ export const countries: Country[] = [
 ];
 
 // Sort countries by name
-export const sortedCountries = [...countries].sort((a, b) => a.name.localeCompare(b.name));
+export const sortedCountries = [...countries].sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
 
 // Get country by dial code
 export const getCountryByDialCode = (dialCode: string): Country | undefined => {
-  return countries.find(country => country.dialCode === dialCode);
+  return countries.find((country) => country.dialCode === dialCode);
 };
 
 // Get country by code
 export const getCountryByCode = (code: string): Country | undefined => {
-  return countries.find(country => country.code === code);
+  return countries.find((country) => country.code === code);
 };

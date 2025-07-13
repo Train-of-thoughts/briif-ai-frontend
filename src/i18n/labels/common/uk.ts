@@ -7,7 +7,7 @@ const ukCommon = {
     login: "Увійти",
     signUp: "Зареєструватися",
     dashboard: "Панель керування",
-    logout: "Вийти"
+    logout: "Вийти",
   },
 
   // Footer
@@ -16,14 +16,14 @@ const ukCommon = {
     features: "Можливості",
     pricing: "Ціни",
     contact: "Контакти",
-    allRightsReserved: "Всі права захищені"
+    allRightsReserved: "Всі права захищені",
   },
 
   // Common buttons and actions
   actions: {
     getStarted: "Почати",
     requestDemo: "Запросити демо",
-    learnMore: "Дізнатися більше"
+    learnMore: "Дізнатися більше",
   },
 
   // Dashboard
@@ -33,8 +33,8 @@ const ukCommon = {
     email: "Електронна пошта",
     firstName: "Ім'я",
     lastName: "Прізвище",
-    userId: "ID користувача"
-  }
+    userId: "ID користувача",
+  },
 };
 
 export default ukCommon;

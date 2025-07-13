@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { User, LoginCredentials, RegisterCredentials } from '@/lib/auth/types';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { User, LoginCredentials, RegisterCredentials } from "@/lib/auth/types";
 
 // Define the auth state type
 interface AuthState {
@@ -13,8 +13,12 @@ interface AuthState {
 
 // Define the auth actions type
 interface AuthActions {
-  login: (credentials: LoginCredentials) => Promise<{ success: boolean; error?: string }>;
-  register: (credentials: RegisterCredentials) => Promise<{ success: boolean; error?: string }>;
+  login: (
+    credentials: LoginCredentials,
+  ) => Promise<{ success: boolean; error?: string }>;
+  register: (
+    credentials: RegisterCredentials,
+  ) => Promise<{ success: boolean; error?: string }>;
   logout: () => Promise<void>;
 }
 
@@ -33,7 +37,7 @@ export function useAuth(): AuthState & AuthActions {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch('/api/auth/me');
+        const response = await fetch("/api/auth/me");
         if (response.ok) {
           const user = await response.json();
           setState({
@@ -49,7 +53,7 @@ export function useAuth(): AuthState & AuthActions {
           });
         }
       } catch (error) {
-        console.error('Error fetching user:', error);
+        console.error("Error fetching user:", error);
         setState({
           user: null,
           isLoggedIn: false,
@@ -62,12 +66,14 @@ export function useAuth(): AuthState & AuthActions {
   }, []);
 
   // Login function
-  const login = async (credentials: LoginCredentials): Promise<{ success: boolean; error?: string }> => {
+  const login = async (
+    credentials: LoginCredentials,
+  ): Promise<{ success: boolean; error?: string }> => {
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(credentials),
       });
@@ -83,24 +89,29 @@ export function useAuth(): AuthState & AuthActions {
         return { success: true };
       } else {
         const error = await response.json();
-        return { success: false, error: error.message || 'Login failed' };
+        return { success: false, error: error.message || "Login failed" };
       }
     } catch (error) {
-      console.error('Login error:', error);
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'An unknown error occurred during login' 
+      console.error("Login error:", error);
+      return {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "An unknown error occurred during login",
       };
     }
   };
 
   // Register function
-  const register = async (credentials: RegisterCredentials): Promise<{ success: boolean; error?: string }> => {
+  const register = async (
+    credentials: RegisterCredentials,
+  ): Promise<{ success: boolean; error?: string }> => {
     try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(credentials),
       });
@@ -116,13 +127,19 @@ export function useAuth(): AuthState & AuthActions {
         return { success: true };
       } else {
         const error = await response.json();
-        return { success: false, error: error.message || 'Registration failed' };
+        return {
+          success: false,
+          error: error.message || "Registration failed",
+        };
       }
     } catch (error) {
-      console.error('Registration error:', error);
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'An unknown error occurred during registration' 
+      console.error("Registration error:", error);
+      return {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "An unknown error occurred during registration",
       };
     }
   };
@@ -130,16 +147,16 @@ export function useAuth(): AuthState & AuthActions {
   // Logout function
   const logout = async (): Promise<void> => {
     try {
-      await fetch('/api/auth/logout', { method: 'POST' });
+      await fetch("/api/auth/logout", { method: "POST" });
       setState({
         user: null,
         isLoggedIn: false,
         isLoading: false,
       });
       router.refresh();
-      router.push('/login');
+      router.push("/login");
     } catch (error) {
-      console.error('Logout error:', error);
+      console.error("Logout error:", error);
     }
   };
 

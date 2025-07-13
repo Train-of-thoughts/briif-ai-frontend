@@ -1,5 +1,5 @@
-import { routing } from '@/i18n/routing';
-import { isValidLocale } from '@/i18n/config';
+import { routing } from "@/i18n/routing";
+import { isValidLocale } from "@/i18n/config";
 
 type Messages = {
   common: Record<string, unknown>;
@@ -18,7 +18,9 @@ export async function getMessages(locale: string) {
 
   // Import translation modules
   const commonModule = await import(`../i18n/labels/common/${validLocale}.ts`);
-  const landingModule = await import(`../i18n/labels/landing/${validLocale}.ts`);
+  const landingModule = await import(
+    `../i18n/labels/landing/${validLocale}.ts`
+  );
   const authModule = await import(`../i18n/labels/auth/${validLocale}.ts`);
 
   const messages = {

@@ -36,7 +36,10 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
 
   return (
     <div className={`text-left ${className}`}>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-300 mb-1">
+      <label
+        htmlFor={id}
+        className="block text-sm font-medium text-gray-300 mb-1"
+      >
         {label}
       </label>
       <div className="relative">
@@ -44,7 +47,7 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
           type={inputType}
           id={id}
           {...register(name)}
-          className={`w-full px-4 py-3 bg-neutral-800 border ${error ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent ${isPassword ? 'pr-12' : ''}`}
+          className={`w-full px-4 py-3 bg-neutral-800 border ${error ? "border-red-500" : "border-gray-700"} rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent ${isPassword ? "pr-12" : ""}`}
           placeholder={placeholder}
         />
         {isPassword && (
@@ -62,9 +65,7 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
           </button>
         )}
       </div>
-      {error && (
-        <p className="mt-1 text-sm text-red-500">{error}</p>
-      )}
+      {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
     </div>
   );
 };

@@ -37,18 +37,18 @@ The project supports the following languages:
 Use the `useTranslations` hook to access translations in client components:
 
 ```tsx
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function MyComponent() {
   const t = useTranslations();
 
   return (
     <div>
-      <h1>{t('common.welcome')}</h1>
-      <p>{t('common.description')}</p>
-      <button>{t('common.save')}</button>
+      <h1>{t("common.welcome")}</h1>
+      <p>{t("common.description")}</p>
+      <button>{t("common.save")}</button>
     </div>
   );
 }
@@ -59,15 +59,15 @@ export default function MyComponent() {
 Use the `useTranslations` hook to access translations in server components:
 
 ```tsx
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function MyServerComponent() {
   const t = useTranslations();
 
   return (
     <div>
-      <h1>{t('common.welcome')}</h1>
-      <p>{t('common.description')}</p>
+      <h1>{t("common.welcome")}</h1>
+      <p>{t("common.description")}</p>
     </div>
   );
 }
@@ -78,7 +78,7 @@ export default function MyServerComponent() {
 Use the `Link` component from next-intl to create links that preserve the current locale:
 
 ```tsx
-import { Link } from 'next-intl/client';
+import { Link } from "next-intl/client";
 
 export default function Navigation() {
   return (
@@ -93,21 +93,33 @@ export default function Navigation() {
 To switch locales, use the `locale` prop:
 
 ```tsx
-import { Link } from 'next-intl/client';
-import { useLocale } from 'next-intl';
+import { Link } from "next-intl/client";
+import { useLocale } from "next-intl";
 
 export default function LanguageSwitcher() {
   const currentLocale = useLocale();
 
   return (
     <div>
-      <Link href="/" locale="en" className={currentLocale === 'en' ? 'active' : ''}>
+      <Link
+        href="/"
+        locale="en"
+        className={currentLocale === "en" ? "active" : ""}
+      >
         English
       </Link>
-      <Link href="/" locale="uk" className={currentLocale === 'uk' ? 'active' : ''}>
+      <Link
+        href="/"
+        locale="uk"
+        className={currentLocale === "uk" ? "active" : ""}
+      >
         Українська
       </Link>
-      <Link href="/" locale="cs" className={currentLocale === 'cs' ? 'active' : ''}>
+      <Link
+        href="/"
+        locale="cs"
+        className={currentLocale === "cs" ? "active" : ""}
+      >
         Čeština
       </Link>
     </div>
@@ -148,9 +160,9 @@ export default {
 };
 
 // Update src/i18n/utils.ts
-import dashboardEn from './labels/dashboard/en';
-import dashboardUk from './labels/dashboard/uk';
-import dashboardCs from './labels/dashboard/cs';
+import dashboardEn from "./labels/dashboard/en";
+import dashboardUk from "./labels/dashboard/uk";
+import dashboardCs from "./labels/dashboard/cs";
 
 export type Labels = {
   common: typeof commonEn;
@@ -179,6 +191,7 @@ const labelModules: Record<Locale, Labels> = {
 The locale is part of the URL path: `/{locale}/path/to/page`
 
 For example:
+
 - `/uk/about` - Ukrainian version of the about page
 - `/en/about` - English version of the about page
 - `/cs/about` - Czech version of the about page

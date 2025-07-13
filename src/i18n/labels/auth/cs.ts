@@ -12,7 +12,7 @@ const csAuth = {
     googleLogin: "Přihlásit se přes Google",
     noAccount: "Nemáte účet?",
     signUp: "Zaregistrovat se",
-    forgotPassword: "Zapomněli jste heslo?"
+    forgotPassword: "Zapomněli jste heslo?",
   },
 
   // Signup page
@@ -30,7 +30,8 @@ const csAuth = {
     optional: "volitelné",
     password: "Heslo",
     passwordPlaceholder: "Vytvořte silné heslo",
-    passwordRequirements: "Musí obsahovat alespoň 8 znaků, písmena, číslice a speciální znaky",
+    passwordRequirements:
+      "Musí obsahovat alespoň 8 znaků, písmena, číslice a speciální znaky",
     confirmPassword: "Potvrzení hesla",
     confirmPasswordPlaceholder: "Potvrďte své heslo",
     submit: "Vytvořit účet",
@@ -38,7 +39,7 @@ const csAuth = {
     or: "nebo",
     googleSignup: "Zaregistrovat se přes Google",
     haveAccount: "Již máte účet?",
-    login: "Přihlásit se"
+    login: "Přihlásit se",
   },
 
   // Validation messages
@@ -49,8 +50,9 @@ const csAuth = {
     passwordTooShort: "Heslo musí obsahovat alespoň 8 znaků",
     passwordRequiresLetter: "Heslo musí obsahovat alespoň jedno písmeno",
     passwordRequiresNumber: "Heslo musí obsahovat alespoň jednu číslici",
-    passwordRequiresSpecial: "Heslo musí obsahovat alespoň jeden speciální znak",
-    passwordsDoNotMatch: "Hesla se neshodují"
+    passwordRequiresSpecial:
+      "Heslo musí obsahovat alespoň jeden speciální znak",
+    passwordsDoNotMatch: "Hesla se neshodují",
   },
 
   // Auth callback page
@@ -60,8 +62,8 @@ const csAuth = {
     error: "Chyba autentizace",
     noToken: "Nebyl nalezen autentizační token",
     storeFailed: "Nepodařilo se uložit autentizační token",
-    genericError: "Během autentizace došlo k chybě"
-  }
+    genericError: "Během autentizace došlo k chybě",
+  },
 };
 
 export default csAuth;

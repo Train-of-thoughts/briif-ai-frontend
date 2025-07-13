@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
 import Link from "next/link";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import { useAuth } from "@/hooks/useAuth";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const DesktopNavigation: React.FC = () => {
-  const t = useTranslations('common');
+  const t = useTranslations("common");
   const { isLoggedIn, user, logout } = useAuth();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -16,7 +16,10 @@ const DesktopNavigation: React.FC = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsDropdownOpen(false);
       }
     }
@@ -37,7 +40,7 @@ const DesktopNavigation: React.FC = () => {
   };
 
   const handleDashboardClick = () => {
-    router.push('/dashboard');
+    router.push("/dashboard");
     setIsDropdownOpen(false);
   };
 
@@ -45,7 +48,7 @@ const DesktopNavigation: React.FC = () => {
     <div className="hidden md:flex md:items-center md:space-x-6">
       {isLoggedIn ? (
         <div className="relative" ref={dropdownRef}>
-          <button 
+          <button
             onClick={toggleDropdown}
             className="flex items-center space-x-2 btn-primary"
           >
@@ -58,24 +61,27 @@ const DesktopNavigation: React.FC = () => {
                 onClick={handleDashboardClick}
                 className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-neutral-700"
               >
-                {t('header.dashboard', { fallback: 'Dashboard' })}
+                {t("header.dashboard", { fallback: "Dashboard" })}
               </button>
               <button
                 onClick={handleLogout}
                 className="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-neutral-700"
               >
-                {t('header.logout', { fallback: 'Logout' })}
+                {t("header.logout", { fallback: "Logout" })}
               </button>
             </div>
           )}
         </div>
       ) : (
         <>
-          <Link href="/login" className="text-gray-300 hover:text-primary-400 transition-colors">
-            {t('header.login')}
+          <Link
+            href="/login"
+            className="text-gray-300 hover:text-primary-400 transition-colors"
+          >
+            {t("header.login")}
           </Link>
           <Link href="/signup" className="btn-primary">
-            {t('header.signUp')}
+            {t("header.signUp")}
           </Link>
         </>
       )}
