@@ -22,7 +22,9 @@ export const metadata: Metadata = {
   description:
     "Briff.ai is a platform that helps you make your social media marketing great again.",
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
