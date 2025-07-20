@@ -34,9 +34,16 @@ export default async function middleware(request: NextRequest) {
   // Get the full URL including search params
   const fullUrl = request.nextUrl.toString();
 
+  // Special handling for sitemap.xml and robots.txt
+  if (pathname === "/sitemap.xml" || pathname === "/robots.txt") {
+    return NextResponse.next();
+  }
+
   const isPublicRoute = publicRoutes.some((route) => {
     // Check if the pathname matches the route exactly
-    if (pathname === route) return true;
+    if (pathname === route) {
+      return true;
+    }
 
     // Check if the URL starts with the route followed by a question mark (search params)
     // This handles cases where search params are present in the URL
@@ -61,7 +68,7 @@ export default async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+    // Match all paths except for specific excluded ones
+    "/((?!_next/static|_next/image|favicon.ico).*)",
   ],
 };
