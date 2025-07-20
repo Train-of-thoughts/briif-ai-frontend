@@ -49,8 +49,8 @@ const enLanding = {
       title: "What Our Customers Say",
       quote:
         '"Briff.ai has completely transformed our social media strategy. We\'re seeing higher engagement and saving hours of work every week."',
-      name: "Jane Doe",
-      position: "Marketing Director, TechCorp",
+      name: "Your Name Here",
+      position: "...",
     },
   },
 } as const;

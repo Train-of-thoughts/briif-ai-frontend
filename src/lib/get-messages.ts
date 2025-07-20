@@ -5,6 +5,7 @@ type Messages = {
   common: Record<string, unknown>;
   landing: Record<string, unknown>;
   auth: Record<string, unknown>;
+  booking: Record<string, unknown>;
 };
 
 const messagesCache = new Map<string, Messages>();
@@ -22,11 +23,13 @@ export async function getMessages(locale: string) {
     `../i18n/labels/landing/${validLocale}.ts`
   );
   const authModule = await import(`../i18n/labels/auth/${validLocale}.ts`);
+  const bookingModule = await import(`../i18n/labels/booking/${validLocale}.ts`);
 
   const messages = {
     common: commonModule.default,
     landing: landingModule.default,
     auth: authModule.default,
+    booking: bookingModule.default,
   };
 
   messagesCache.set(validLocale, messages);

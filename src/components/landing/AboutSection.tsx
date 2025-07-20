@@ -1,10 +1,16 @@
+'use client';
+
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
-import {Link} from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { useParams } from "next/navigation";
+import DemoBookingDialog from "@/components/booking/DemoBookingDialog";
 
 export default function AboutSection() {
   const t = useTranslations("landing.about");
   const commonT = useTranslations("common");
+  const params = useParams();
+  const locale = params.locale as string || 'en';
 
   return (
     <section id="about" className="container-section">
@@ -47,12 +53,16 @@ export default function AboutSection() {
             >
               {commonT("actions.getStarted")}
             </Link>
-            <Link
-              href="/demo"
-              className="btn-secondary w-full sm:w-auto text-center"
-            >
-              {commonT("actions.requestDemo")}
-            </Link>
+            <DemoBookingDialog locale={locale}>
+              {(openDialog) => (
+                <button
+                  onClick={openDialog}
+                  className="btn-secondary w-full sm:w-auto text-center"
+                >
+                  {commonT("actions.requestDemo")}
+                </button>
+              )}
+            </DemoBookingDialog>
           </div>
         </div>
         <div className="bg-linear-[to_bottom_right,#4c1d95_0%,#6d28d9_100%] p-10 rounded-3xl shadow-lg">
@@ -64,7 +74,7 @@ export default function AboutSection() {
               {t("testimonial.quote")}
             </blockquote>
             <div className="flex items-center">
-              <div className="w-12 h-12 bg-linear-[to_bottom_right,#7c3aed_0%,#a78bfa_100%] rounded-full mr-4 flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-12 h-12 bg-linear-[to_bottom_right,#7c3aed_0%,#a78bfa_100%] rounded-full mr-4 flex items-center justify-center text-white font-bold text-lg shrink-0">
                 JD
               </div>
               <div>

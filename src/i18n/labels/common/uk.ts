@@ -22,7 +22,7 @@ const ukCommon = {
   // Common buttons and actions
   actions: {
     getStarted: "Почати",
-    requestDemo: "Запросити демо",
+    requestDemo: "Записатись на демо",
     learnMore: "Дізнатися більше",
   },
 

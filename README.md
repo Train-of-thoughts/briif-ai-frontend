@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This project supports multiple languages:
 
-- Ukrainian (uk) - Default language 
+- Ukrainian (uk) - Default language
 - English (en)
 - Czech (cs)
 
