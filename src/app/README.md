@@ -52,3 +52,15 @@ disallow: [
   '/new-private-route/',
 ],
 ```
+
+## Authentication Bypass
+
+Both the sitemap.xml and robots.txt files are configured to be accessible without authentication. This is done in the middleware.ts file by adding these routes to the list of public routes:
+
+```typescript
+const publicRoutes = I18N_LOCALES.flatMap((locale) => [
+  // Other public routes...
+]).concat(["/", "/callback", "/sitemap.xml", "/robots.txt"]);
+```
+
+This ensures that search engines can access these files without being redirected to the login page.

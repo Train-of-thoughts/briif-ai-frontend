@@ -18,7 +18,7 @@ const publicRoutes = I18N_LOCALES.flatMap((locale) => [
   `/${locale}/reset-password`,
   `/${locale}/auth/callback`,
   `/${locale}/callback`,
-]).concat(["/", "/callback"]);
+]).concat(["/", "/callback", "/sitemap.xml", "/robots.txt"]);
 
 // Define the middleware handler
 export default async function middleware(request: NextRequest) {
