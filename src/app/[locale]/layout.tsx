@@ -1,6 +1,5 @@
 import "../globals.css";
 
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "@/lib/get-messages";
@@ -17,16 +16,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Briff.ai - Make SMM Great Again",
-  description:
-    "Briff.ai is a platform that helps you make your social media marketing great again.",
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const validLocale = isValidLocale(locale) ? locale : defaultLocale;
+  const messages = await getMessages(validLocale);
+
+  return {
+    title: {
+      template: `%s | ${messages?.common.metadata.siteName || 'Briff.ai'}`,
+      default: messages?.common.metadata.title || 'Briff.ai',
+    },
+    description: messages?.common.metadata.description || 'Briff.ai is a platform that helps you make your social media marketing great again.',
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+      apple: '/favicon.ico',
+    },
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

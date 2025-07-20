@@ -35,6 +35,13 @@ const ukCommon = {
     lastName: "Прізвище",
     userId: "ID користувача",
   },
+
+  // Metadata
+  metadata: {
+    title: "SMM помічник для Маркетингу у Social Media",
+    siteName: "Briff.ai",
+    description: "Briff.ai - це платформа, яка допомагає зробити ваш маркетинг у соціальних мережах знову великим.",
+  },
 };
 
 export default ukCommon;

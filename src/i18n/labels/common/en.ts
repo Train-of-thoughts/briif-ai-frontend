@@ -35,6 +35,13 @@ const enCommon = {
     lastName: "Last Name",
     userId: "User ID",
   },
+
+  // Metadata
+  metadata: {
+    title: "Make SMM Great Again",
+    siteName: "Briff.ai",
+    description: "Briff.ai is a platform that helps you make your social media marketing great again.",
+  },
 };
 
 export default enCommon;

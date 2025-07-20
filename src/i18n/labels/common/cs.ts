@@ -35,6 +35,13 @@ const csCommon = {
     lastName: "Příjmení",
     userId: "ID uživatele",
   },
+
+  // Metadata
+  metadata: {
+    title: "Udělejte SMM znovu skvělým",
+    siteName: "Briff.ai",
+    description: "Briff.ai je platforma, která vám pomůže udělat váš sociální marketing znovu skvělým.",
+  },
 };
 
 export default csCommon;
