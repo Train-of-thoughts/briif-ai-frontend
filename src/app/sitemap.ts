@@ -30,7 +30,7 @@ const routes: Route[] = [
 ];
 
 export default function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://briif.ai';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://briffai.com';
   
   // Generate sitemap entries for each locale and route
   const sitemapEntries = I18N_LOCALES.flatMap(locale => 
