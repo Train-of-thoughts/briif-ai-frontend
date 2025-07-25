@@ -13,6 +13,8 @@ const enAuth = {
     noAccount: "Don't have an account?",
     signUp: "Sign up",
     forgotPassword: "Forgot password?",
+    genericError: "An error occurred during login",
+    useGoogleLogin: "Please use Google login for this account",
   },
 
   // Signup page

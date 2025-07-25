@@ -13,6 +13,8 @@ const csAuth = {
     noAccount: "Nemáte účet?",
     signUp: "Zaregistrovat se",
     forgotPassword: "Zapomněli jste heslo?",
+    genericError: "Během přihlašování došlo k chybě",
+    useGoogleLogin: "Pro tento účet prosím použijte přihlášení přes Google",
   },
 
   // Signup page

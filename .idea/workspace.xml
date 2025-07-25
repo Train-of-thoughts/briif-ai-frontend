@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3b44326e-2d28-42bc-8c0b-8bdb93b99b62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/dashboard/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/labels/common/cs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/labels/common/cs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/labels/common/en.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/labels/common/en.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/labels/common/uk.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/labels/common/uk.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;I do mind&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
     &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
@@ -76,6 +83,8 @@
       <recent name="$PROJECT_DIR$/public/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/[locale]" />
       <recent name="$PROJECT_DIR$/src/lib" />
     </key>
   </component>
@@ -114,6 +123,8 @@
       <workItem from="1752309192610" duration="5806000" />
       <workItem from="1752402205776" duration="699000" />
       <workItem from="1752407891265" duration="6157000" />
+      <workItem from="1753205889408" duration="4835000" />
+      <workItem from="1753466261233" duration="51000" />
     </task>
     <servers />
   </component>

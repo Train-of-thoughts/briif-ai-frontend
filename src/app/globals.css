@@ -16,6 +16,9 @@
   .bg-linear-\[to_right\,\#a78bfa_0\%\,\#7c3aed_100\%\] {
     background-image: linear-gradient(to right, #a78bfa 0%, #7c3aed 100%);
   }
+  .bg-linear-\[to_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] {
+    background-image: linear-gradient(to right, #4c1d95 0%, #6d28d9 100%);
+  }
   .bg-linear-\[to_bottom_right\,\#7c3aed_0\%\,\#a78bfa_100\%\] {
     background-image: linear-gradient(
       to bottom right,
@@ -32,6 +35,55 @@
   }
   .bg-linear-\[93\.39deg\,\#007F9B_1\.42\%\,\#00C875_173\.54\%\] {
     background-image: linear-gradient(93.39deg, #007f9b 1.42%, #00c875 173.54%);
+  }
+}
+
+/* Animation for active tab in aside menu */
+@keyframes tabActivate {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tab-active-animation {
+  animation: tabActivate 0.3s ease-in-out forwards, gradientShift 3s ease infinite;
+  background-size: 200% 200%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-active-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
   }
 }
 
