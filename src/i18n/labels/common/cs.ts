@@ -77,6 +77,10 @@ const csCommon = {
 
     system: {
       title: "Systémová nastavení",
+      appearance: "Vzhled",
+      theme: "Motiv",
+      light: "Světlý",
+      dark: "Tmavý",
     },
 
     data: {

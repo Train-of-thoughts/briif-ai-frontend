@@ -39,16 +39,16 @@ export default function Accordion({
   };
 
   return (
-    <div id={id} className="border border-neutral-700 rounded-lg mb-4">
+    <div id={id} className="border border-gray-200 dark:border-neutral-700 rounded-lg mb-4">
       <button
         className="w-full flex justify-between items-center p-4 text-left focus:outline-none"
         onClick={toggleAccordion}
         aria-expanded={isOpen}
         aria-controls={`content-${id}`}
       >
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <h3 className="text-xl font-semibold text-gray-700 dark:text-white">{title}</h3>
         <ChevronUpIcon
-          className={`h-5 w-5 text-gray-300 transition-transform duration-300 ${
+          className={`h-5 w-5 text-gray-500 dark:text-gray-300 transition-transform duration-300 ${
             isOpen ? "" : "transform rotate-180"
           }`}
         />
@@ -60,7 +60,7 @@ export default function Accordion({
         style={{ maxHeight: contentHeight }}
         aria-hidden={!isOpen}
       >
-        <div className="p-4 border-t border-neutral-700">{children}</div>
+        <div className="p-4 border-t border-gray-200 dark:border-neutral-700">{children}</div>
       </div>
     </div>
   );

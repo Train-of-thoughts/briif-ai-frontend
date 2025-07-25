@@ -77,6 +77,10 @@ const enCommon = {
 
     system: {
       title: "System Settings",
+      appearance: "Appearance",
+      theme: "Theme",
+      light: "Light",
+      dark: "Dark",
     },
 
     data: {

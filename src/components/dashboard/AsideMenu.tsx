@@ -72,7 +72,7 @@ export default function AsideMenu({
   // Tablet expand/collapse button
   const ExpandButton = () => (
     <button
-      className="absolute -right-3 bottom-20 hidden sm:flex lg:hidden items-center justify-center h-6 w-6 rounded-full bg-neutral-700 text-white"
+      className="absolute -right-3 bottom-20 hidden sm:flex lg:hidden items-center justify-center h-6 w-6 rounded-full bg-gray-300 dark:bg-neutral-700 text-gray-700 dark:text-white"
       onClick={toggleExpand}
       aria-label={isExpanded 
         ? t("dashboard.menu.collapseMenu", { fallback: "Collapse menu" }) 
@@ -98,8 +98,8 @@ export default function AsideMenu({
             href={item.href}
             className={`flex ${isExpanded ? 'items-center px-4' : 'items-center justify-center h-12 w-12 mx-auto'} py-3 rounded-lg transition-colors ${
               isActive
-                ? "bg-linear-[to_right,#4c1d95_0%,#6d28d9_100%] text-white"
-                : "text-gray-300 hover:bg-neutral-700"
+                ? "bg-linear-[to_right,#c4b5fd_0%,#ddd6fe_100%] dark:bg-linear-[to_right,#4c1d95_0%,#6d28d9_100%] text-white"
+                : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-700"
             }`}
           >
             {isActive ? 
@@ -119,7 +119,7 @@ export default function AsideMenu({
     <>
       {/* Sidebar - hidden on mobile unless menu is open, collapsed on tablet by default */}
       <aside 
-        className={`bg-neutral-800 border-r border-neutral-700 h-screen fixed left-0 top-0 pt-16 z-40 transition-all duration-300 
+        className={`bg-white dark:bg-neutral-800 border-r border-gray-200 dark:border-neutral-700 h-screen fixed left-0 top-0 pt-16 z-40 transition-all duration-300 
           ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'} 
           ${isExpanded ? 'w-64' : 'w-20'} 
           sm:block`}
@@ -133,7 +133,7 @@ export default function AsideMenu({
       {/* Overlay for mobile menu */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 sm:hidden"
+          className="fixed inset-0 bg-black bg-opacity-30 dark:bg-opacity-50 z-30 sm:hidden"
         />
       )}
     </>

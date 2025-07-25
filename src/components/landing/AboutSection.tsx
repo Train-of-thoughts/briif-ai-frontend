@@ -65,7 +65,7 @@ export default function AboutSection() {
             </DemoBookingDialog>
           </div>
         </div>
-        <div className="bg-linear-[to_bottom_right,#4c1d95_0%,#6d28d9_100%] p-10 rounded-3xl shadow-lg">
+        <div className="bg-linear-[to_bottom_right,#c4b5fd_0%,#ddd6fe_100%] dark:bg-linear-[to_bottom_right,#4c1d95_0%,#6d28d9_100%] p-10 rounded-3xl shadow-lg">
           <div className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
             <h3 className="text-2xl font-semibold mb-6 text-primary-400">
               {t("testimonial.title")}

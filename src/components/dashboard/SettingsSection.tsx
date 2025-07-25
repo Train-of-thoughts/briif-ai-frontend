@@ -49,10 +49,10 @@ export default function SettingsSection({
       <div className="space-y-6">
         {children}
 
-        <div className="flex justify-end space-x-4 pt-4 pb-4 border-t border-neutral-700">
+        <div className="flex justify-end space-x-4 pt-4 pb-4 border-t border-gray-200 dark:border-neutral-700">
           <button
             onClick={handleReset}
-            className="px-4 py-2 rounded-md border border-neutral-600 text-gray-300 hover:bg-neutral-700 transition-colors"
+            className="px-4 py-2 rounded-md border border-gray-300 dark:border-neutral-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           >
             {t("settings.reset", { fallback: "Reset" })}
           </button>

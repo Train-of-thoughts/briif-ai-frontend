@@ -19,6 +19,9 @@
   .bg-linear-\[to_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] {
     background-image: linear-gradient(to right, #4c1d95 0%, #6d28d9 100%);
   }
+  .bg-linear-\[to_right\,\#c4b5fd_0\%\,\#ddd6fe_100\%\] {
+    background-image: linear-gradient(to right, #a78bfa 0%, #8b5cf6 100%);
+  }
   .bg-linear-\[to_bottom_right\,\#7c3aed_0\%\,\#a78bfa_100\%\] {
     background-image: linear-gradient(
       to bottom right,
@@ -31,6 +34,13 @@
       to bottom right,
       #4c1d95 0%,
       #6d28d9 100%
+    );
+  }
+  .bg-linear-\[to_bottom_right\,\#c4b5fd_0\%\,\#ddd6fe_100\%\] {
+    background-image: linear-gradient(
+      to bottom right,
+      #a78bfa 0%,
+      #8b5cf6 100%
     );
   }
   .bg-linear-\[93\.39deg\,\#007F9B_1\.42\%\,\#00C875_173\.54\%\] {

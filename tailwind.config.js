@@ -21,7 +21,7 @@ module.exports = {
         },
         // Light mode colors
         light: {
-          background: '#ffffff',
+          background: '#f5f5f5',
           foreground: '#171717',
           primary: '#7c3aed', // purple-600
           secondary: '#a78bfa', // purple-400

@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import ProfileSettings from "@/components/dashboard/ProfileSettings";
 import DevelopmentSettingsSection from "@/components/dashboard/DevelopmentSettingsSection";
+import SystemSettings from "@/components/dashboard/SystemSettings";
 import SettingsAnchorMenu from "@/components/dashboard/SettingsAnchorMenu";
 import ConfirmationModal from "@/components/common/ConfirmationModal";
 
@@ -107,8 +108,8 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="bg-neutral-800 rounded-lg shadow-lg p-6 md:p-8">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-primary-1-400">
+    <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-6 md:p-8 border border-gray-200 dark:border-neutral-700">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-primary-1-400">
         {t("settings.title", { fallback: "Settings" })}
       </h1>
       
@@ -132,9 +133,8 @@ export default function SettingsPage() {
             id="security"
           />
           
-          <DevelopmentSettingsSection 
-            title={t("settings.system.title", { fallback: "System Settings" })}
-            id="system"
+          <SystemSettings 
+            onUnsavedChanges={(hasChanges) => handleUnsavedChanges("system", hasChanges)} 
           />
           
           <DevelopmentSettingsSection 

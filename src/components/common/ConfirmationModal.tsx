@@ -69,21 +69,21 @@ export default function ConfirmationModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div
         ref={modalRef}
-        className="bg-neutral-800 rounded-lg p-6 max-w-md w-full shadow-xl border border-neutral-700"
+        className="bg-white dark:bg-neutral-800 rounded-lg p-6 max-w-md w-full shadow-xl border border-gray-200 dark:border-neutral-700"
       >
         <div className="flex items-start mb-4">
           <div className="flex-shrink-0 mr-4">
             <ExclamationTriangleIcon className="h-6 w-6 text-yellow-500" />
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-            <p className="text-gray-300">{message}</p>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{title}</h3>
+            <p className="text-gray-600 dark:text-gray-300">{message}</p>
           </div>
         </div>
         <div className="flex justify-end space-x-4 mt-6">
           <button
             onClick={onClose}
-            className="px-4 py-2 rounded-md border border-neutral-600 text-gray-300 hover:bg-neutral-700 transition-colors"
+            className="px-4 py-2 rounded-md border border-gray-300 dark:border-neutral-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           >
             {cancelText || t("modal.cancel", { fallback: "Cancel" })}
           </button>

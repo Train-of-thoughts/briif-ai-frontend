@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "@/lib/get-messages";
 import { locales, defaultLocale, isValidLocale } from "@/i18n";
 import {GoogleAnalytics, GoogleTagManager} from "@next/third-parties/google";
+import ThemeProvider from "@/components/theme/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,11 +54,15 @@ export default async function LocaleLayout({
   return (
     <html lang={validLocale} className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-black text-white min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen
+        bg-light-background text-light-foreground
+        dark:bg-dark-background dark:text-dark-foreground`}
       >
-        <NextIntlClientProvider locale={validLocale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider locale={validLocale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
       <GoogleTagManager gtmId="GTM-56GR76S2" />
       <GoogleAnalytics gaId="G-R1WNKEYCT2" />

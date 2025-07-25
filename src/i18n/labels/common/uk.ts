@@ -77,6 +77,10 @@ const ukCommon = {
 
     system: {
       title: "Системні налаштування",
+      appearance: "Зовнішній вигляд",
+      theme: "Тема",
+      light: "Світла",
+      dark: "Темна",
     },
 
     data: {

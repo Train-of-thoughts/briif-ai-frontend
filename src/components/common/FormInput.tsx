@@ -38,7 +38,7 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
     <div className={`text-left ${className}`}>
       <label
         htmlFor={id}
-        className="block text-sm font-medium text-gray-300 mb-1"
+        className="block text-sm font-medium text-gray-500 dark:text-gray-300 mb-1"
       >
         {label}
       </label>
@@ -47,13 +47,13 @@ const FormInput = <TFormValues extends Record<string, unknown>>({
           type={inputType}
           id={id}
           {...register(name)}
-          className={`w-full px-4 py-3 bg-neutral-800 border ${error ? "border-red-500" : "border-gray-700"} rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent ${isPassword ? "pr-12" : ""}`}
+          className={`w-full px-4 py-3 bg-white dark:bg-neutral-800 border ${error ? "border-red-500" : "border-gray-300 dark:border-gray-700"} rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-800 dark:text-white ${isPassword ? "pr-12" : ""}`}
           placeholder={placeholder}
         />
         {isPassword && (
           <button
             type="button"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300 focus:outline-none"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 focus:outline-none"
             onClick={togglePasswordVisibility}
             tabIndex={-1}
           >
