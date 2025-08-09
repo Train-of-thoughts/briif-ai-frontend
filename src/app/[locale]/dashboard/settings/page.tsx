@@ -11,7 +11,6 @@ import ConfirmationModal from "@/components/common/ConfirmationModal";
 export default function SettingsPage() {
   const t = useTranslations("common");
   
-  // Track which sections have unsaved changes
   const [unsavedChanges, setUnsavedChanges] = useState<Record<string, boolean>>({
     profile: false,
     security: false,
@@ -20,7 +19,6 @@ export default function SettingsPage() {
     payment: false,
   });
   
-  // Modal state
   const [modalOpen, setModalOpen] = useState(false);
   const pendingNavigationRef = useRef<string | null>(null);
   
@@ -60,15 +58,12 @@ export default function SettingsPage() {
   };
   
   const handleAnchorClick = (id: string) => {
-    // Check if any section has unsaved changes
     const hasAnyUnsavedChanges = Object.values(unsavedChanges).some(Boolean);
     
     if (hasAnyUnsavedChanges) {
-      // Store the target section ID and show confirmation modal
       pendingNavigationRef.current = id;
       setModalOpen(true);
     } else {
-      // No unsaved changes, navigate directly
       scrollToSection(id);
     }
   };
@@ -76,16 +71,12 @@ export default function SettingsPage() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // Get the element's position relative to the document
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       
-      // Calculate the offset (header height + some additional padding)
-      const headerOffset = 80; // 64px header height + 16px additional padding
+      const headerOffset = 80;
       
-      // Calculate the final scroll position
       const offsetPosition = elementPosition - headerOffset;
       
-      // Scroll to the element with the offset
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -94,7 +85,6 @@ export default function SettingsPage() {
   };
   
   const handleConfirmNavigation = () => {
-    // User confirmed navigation despite unsaved changes
     if (pendingNavigationRef.current) {
       scrollToSection(pendingNavigationRef.current);
       setModalOpen(false);
@@ -108,13 +98,12 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-6 md:p-8 border border-gray-200 dark:border-neutral-700">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-primary-1-400">
+    <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-lg p-6 md:p-8 border border-neutral-200 dark:border-neutral-700">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-neutral-800 dark:text-primary-400">
         {t("settings.title", { fallback: "Settings" })}
       </h1>
       
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Anchor menu */}
         <div className="md:w-64 flex-shrink-0 md:order-last">
           <SettingsAnchorMenu 
             items={sections} 
@@ -122,7 +111,6 @@ export default function SettingsPage() {
           />
         </div>
         
-        {/* Settings sections */}
         <div className="flex-1 space-y-8 md:order-first">
           <ProfileSettings 
             onUnsavedChanges={(hasChanges) => handleUnsavedChanges("profile", hasChanges)} 
@@ -149,7 +137,6 @@ export default function SettingsPage() {
         </div>
       </div>
       
-      {/* Confirmation Modal */}
       <ConfirmationModal
         isOpen={modalOpen}
         onClose={handleCancelNavigation}
