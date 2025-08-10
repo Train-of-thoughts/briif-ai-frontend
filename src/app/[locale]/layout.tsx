@@ -1,5 +1,3 @@
-import "../globals.css";
-
 import {Geist, Geist_Mono} from "next/font/google";
 import {NextIntlClientProvider} from "next-intl";
 import {getMessages} from "@/lib/get-messages";
@@ -52,21 +50,6 @@ export default async function LocaleLayout({
 
     return (
         <html lang={validLocale} className="scroll-smooth">
-        <script
-            id="set-theme"
-            dangerouslySetInnerHTML={{
-                __html: `(function(){
-      try {
-        var s = localStorage.getItem('theme');
-        var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', s || sys);
-      } catch(_) {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    })();`,
-            }}
-        />
-
         <body
             className={`${geistSans.variable} ${geistMono.variable} bg-black text-white min-h-screen`}
         >

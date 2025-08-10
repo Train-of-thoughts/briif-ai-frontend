@@ -1,7 +1,6 @@
 "use client"
 
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Cog6ToothIcon as Cog6ToothIconOutline,
@@ -17,6 +16,7 @@ import {
   HomeIcon as HomeIconSolid,
   ArrowPathIcon as ArrowPathIconSolid,
 } from "@heroicons/react/24/solid";
+import { Link } from "@/i18n/navigation";
 
 interface AsideMenuProps {
   locale: string;
@@ -44,25 +44,25 @@ export default function AsideMenu({
   const menuItems = [
     {
       name: t("dashboard.menu.dashboard", { fallback: "Dashboard" }),
-      href: `/${locale}/dashboard`,
+      href: `/dashboard`,
       iconOutline: HomeIconOutline,
       iconSolid: HomeIconSolid,
     },
     {
       name: t("dashboard.menu.calendar", { fallback: "Publication Calendar" }),
-      href: `/${locale}/dashboard/calendar`,
+      href: `/dashboard/calendar`,
       iconOutline: CalendarIconOutline,
       iconSolid: CalendarIconSolid,
     },
     {
       name: t("dashboard.menu.integrations", { fallback: "Integrations" }),
-      href: `/${locale}/dashboard/integrations`,
+      href: `/dashboard/integrations`,
       iconOutline: ArrowPathIconOutline,
       iconSolid: ArrowPathIconSolid,
     },
     {
       name: t("dashboard.menu.settings", { fallback: "Settings" }),
-      href: `/${locale}/dashboard/settings`,
+      href: `/dashboard/settings`,
       iconOutline: Cog6ToothIconOutline,
       iconSolid: Cog6ToothIconSolid,
     },

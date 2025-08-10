@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @source "./src/**/*.{js,ts,jsx,tsx,mdx}";
 
 /* -------------------- */
@@ -46,14 +47,37 @@
 /* Утиліти Tailwind через кастомні змінні */
 /* -------------------- */
 @layer utilities {
-    .bg-app { background: var(--background); }
-    .text-app { color: var(--foreground); }
-    .border-app { border-color: var(--border); }
-    .bg-muted { background: var(--muted); }
-    .text-muted { color: var(--muted); }
-    .bg-primary { background: var(--primary); }
-    .text-primary { color: var(--primary); }
-    .border-primary { border-color: var(--primary); }
+    .bg-app {
+        background: var(--background);
+    }
+
+    .text-app {
+        color: var(--foreground);
+    }
+
+    .border-app {
+        border-color: var(--border);
+    }
+
+    .bg-muted {
+        background: var(--muted);
+    }
+
+    .text-muted {
+        color: var(--muted);
+    }
+
+    .bg-primary {
+        background: var(--primary);
+    }
+
+    .text-primary {
+        color: var(--primary);
+    }
+
+    .border-primary {
+        border-color: var(--primary);
+    }
 }
 
 /* -------------------- */
@@ -69,19 +93,39 @@ html.theme-switching *::after {
 /* Градієнти */
 /* -------------------- */
 @layer utilities {
-    .bg-linear-\[135deg\,\#7c3aed_0\%\,\#a78bfa_100\%\] { background-image: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); }
-    .bg-linear-\[135deg\,\#6d28d9_0\%\,\#8b5cf6_100\%\] { background-image: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%); }
-    .bg-linear-\[to_right\,\#8b5cf6_0\%\,\#c4b5fd_100\%\] { background-image: linear-gradient(to right, #8b5cf6 0%, #c4b5fd 100%); }
-    .bg-linear-\[to_right\,\#a78bfa_0\%\,\#7c3aed_100\%\] { background-image: linear-gradient(to right, #a78bfa 0%, #7c3aed 100%); }
-    .bg-linear-\[to_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] { background-image: linear-gradient(to right, #4c1d95 0%, #6d28d9 100%); }
-    .bg-linear-\[to_bottom_right\,\#7c3aed_0\%\,\#a78bfa_100\%\] { background-image: linear-gradient(to bottom right, #7c3aed 0%, #a78bfa 100%); }
-    .bg-linear-\[to_bottom_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] { background-image: linear-gradient(to bottom right, #4c1d95 0%, #6d28d9 100%); }
-    .bg-linear-\[93\.39deg\,\#007F9B_1\.42\%\,\#00C875_173\.54\%\] { background-image: linear-gradient(93.39deg, #007f9b 1.42%, #00c875 173.54%); }
+    .bg-linear-\[135deg\,\#7c3aed_0\%\,\#a78bfa_100\%\] {
+        background-image: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    }
+
+    .bg-linear-\[135deg\,\#6d28d9_0\%\,\#8b5cf6_100\%\] {
+        background-image: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+    }
+
+    .bg-linear-\[to_right\,\#8b5cf6_0\%\,\#c4b5fd_100\%\] {
+        background-image: linear-gradient(to right, #8b5cf6 0%, #c4b5fd 100%);
+    }
+
+    .bg-linear-\[to_right\,\#a78bfa_0\%\,\#7c3aed_100\%\] {
+        background-image: linear-gradient(to right, #a78bfa 0%, #7c3aed 100%);
+    }
+
+    .bg-linear-\[to_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] {
+        background-image: linear-gradient(to right, #4c1d95 0%, #6d28d9 100%);
+    }
+
+    .bg-linear-\[to_bottom_right\,\#7c3aed_0\%\,\#a78bfa_100\%\] {
+        background-image: linear-gradient(to bottom right, #7c3aed 0%, #a78bfa 100%);
+    }
+
+    .bg-linear-\[to_bottom_right\,\#4c1d95_0\%\,\#6d28d9_100\%\] {
+        background-image: linear-gradient(to bottom right, #4c1d95 0%, #6d28d9 100%);
+    }
+
+    .bg-linear-\[93\.39deg\,\#007F9B_1\.42\%\,\#00C875_173\.54\%\] {
+        background-image: linear-gradient(93.39deg, #007f9b 1.42%, #00c875 173.54%);
+    }
 }
 
-/* -------------------- */
-/* Тема Tailwind */
-/* -------------------- */
 @theme {
     --breakpoint-xs: 512px;
     --breakpoint-sm: 640px;
@@ -150,97 +194,114 @@ html.theme-switching *::after {
     --color-primary-900: #4c1d95;
     --color-primary-950: #2e1065;
 
-  --color-primary-1-100: #92e4f6;
-  --color-primary-1-200: #5edefa;
-  --color-primary-1-300: #2ccef1;
-  --color-primary-1-400: #00b9e2;
-  --color-primary-1-500: #007f9b;
-  --color-primary-1-600: #00667c;
-  --color-primary-1-700: #004c5d;
-  --color-primary-1-800: #00333e;
-  --color-primary-1-900: #00191f;
+    --color-primary-1-100: #92e4f6;
+    --color-primary-1-200: #5edefa;
+    --color-primary-1-300: #2ccef1;
+    --color-primary-1-400: #00b9e2;
+    --color-primary-1-500: #007f9b;
+    --color-primary-1-600: #00667c;
+    --color-primary-1-700: #004c5d;
+    --color-primary-1-800: #00333e;
+    --color-primary-1-900: #00191f;
 
-  --color-primary-2-100: #e0def2;
-  --color-primary-2-200: #c2beef;
-  --color-primary-2-300: #978fe8;
-  --color-primary-2-400: #3c348f;
-  --color-primary-2-500: #211c52;
-  --color-primary-2-600: #1a1642;
-  --color-primary-2-700: #141131;
-  --color-primary-2-800: #0d0b21;
-  --color-primary-2-900: #070610;
+    --color-primary-2-100: #e0def2;
+    --color-primary-2-200: #c2beef;
+    --color-primary-2-300: #978fe8;
+    --color-primary-2-400: #3c348f;
+    --color-primary-2-500: #211c52;
+    --color-primary-2-600: #1a1642;
+    --color-primary-2-700: #141131;
+    --color-primary-2-800: #0d0b21;
+    --color-primary-2-900: #070610;
 
-  --color-secondary-100: #ddebfe;
-  --color-secondary-200: #bcd7fe;
-  --color-secondary-300: #9ac3fd;
-  --color-secondary-400: #79affd;
-  --color-secondary-500: #579bfc;
-  --color-secondary-600: #1473fb;
-  --color-secondary-700: #0454c8;
-  --color-secondary-800: #023885;
-  --color-secondary-900: #011c43;
+    --color-secondary-100: #ddebfe;
+    --color-secondary-200: #bcd7fe;
+    --color-secondary-300: #9ac3fd;
+    --color-secondary-400: #79affd;
+    --color-secondary-500: #579bfc;
+    --color-secondary-600: #1473fb;
+    --color-secondary-700: #0454c8;
+    --color-secondary-800: #023885;
+    --color-secondary-900: #011c43;
 
-  --color-secondary-2-100: #feecdd;
-  --color-secondary-2-200: #fed8bc;
-  --color-secondary-2-300: #fdc59a;
-  --color-secondary-2-400: #fdb179;
-  --color-secondary-2-500: #fc9e57;
-  --color-secondary-2-600: #fb7814;
-  --color-secondary-2-700: #c85804;
-  --color-secondary-2-800: #853b02;
-  --color-secondary-2-900: #431d01;
+    --color-secondary-2-100: #feecdd;
+    --color-secondary-2-200: #fed8bc;
+    --color-secondary-2-300: #fdc59a;
+    --color-secondary-2-400: #fdb179;
+    --color-secondary-2-500: #fc9e57;
+    --color-secondary-2-600: #fb7814;
+    --color-secondary-2-700: #c85804;
+    --color-secondary-2-800: #853b02;
+    --color-secondary-2-900: #431d01;
 
-  --color-neutral-100: #ffffff;
-  --color-neutral-200: #ededf0;
-  --color-neutral-300: #a9a9b0;
-  --color-neutral-400: #7e7e89;
-  --color-neutral-500: #56565e;
-  --color-neutral-600: #45454b;
-  --color-neutral-700: #343438;
-  --color-neutral-800: #222226;
-  --color-neutral-900: #111113;
+    --color-neutral-100: #ffffff;
+    --color-neutral-200: #ededf0;
+    --color-neutral-300: #a9a9b0;
+    --color-neutral-400: #7e7e89;
+    --color-neutral-500: #56565e;
+    --color-neutral-600: #45454b;
+    --color-neutral-700: #343438;
+    --color-neutral-800: #222226;
+    --color-neutral-900: #111113;
 
-  --color-danger-100: #ffd7d7;
-  --color-danger-200: #ffafaf;
-  --color-danger-300: #ff8888;
-  --color-danger-400: #ff6060;
-  --color-danger-500: #ff3838;
-  --color-danger-600: #f90000;
-  --color-danger-700: #bb0000;
-  --color-danger-800: #7c0000;
-  --color-danger-900: #3e0000;
+    --color-danger-100: #ffd7d7;
+    --color-danger-200: #ffafaf;
+    --color-danger-300: #ff8888;
+    --color-danger-400: #ff6060;
+    --color-danger-500: #ff3838;
+    --color-danger-600: #f90000;
+    --color-danger-700: #bb0000;
+    --color-danger-800: #7c0000;
+    --color-danger-900: #3e0000;
 
-  --color-success-100: #c1ffe5;
-  --color-success-200: #83ffcc;
-  --color-success-300: #45ffb2;
-  --color-success-400: #07ff98;
-  --color-success-500: #00c875;
-  --color-success-600: #00a05e;
-  --color-success-700: #007846;
-  --color-success-800: #00502f;
-  --color-success-900: #002817;
+    --color-success-100: #c1ffe5;
+    --color-success-200: #83ffcc;
+    --color-success-300: #45ffb2;
+    --color-success-400: #07ff98;
+    --color-success-500: #00c875;
+    --color-success-600: #00a05e;
+    --color-success-700: #007846;
+    --color-success-800: #00502f;
+    --color-success-900: #002817;
 }
 
 .headline-1 {
-  font-family: var(--font-family-header);
-  font-size: var(--font-size-h1);
-  line-height: var(--line-height-h1);
-  font-weight: var(--font-weight-semibold);
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-weight: var(--font-weight-semibold);
 }
 
 .headline-2 {
-  font-family: var(--font-family-header);
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
-  font-weight: var(--font-weight-semibold);
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: var(--font-weight-semibold);
 }
 
 /* -------------------- */
 /* Типографія */
 /* -------------------- */
-.headline-1 { font-family: var(--font-family-header); font-size: var(--font-size-h1); line-height: var(--line-height-h1); font-weight: var(--font-weight-semibold); }
-.headline-2 { font-family: var(--font-family-header); font-size: var(--font-size-h2); line-height: var(--line-height-h2); font-weight: var(--font-weight-semibold); }
-.headline-3 { font-family: var(--font-family-header); font-size: var(--font-size-h3); line-height: var(--line-height-h3); font-weight: var(--font-weight-semibold); }
+.headline-1 {
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-weight: var(--font-weight-semibold);
+}
+
+.headline-2 {
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: var(--font-weight-semibold);
+}
+
+.headline-3 {
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    font-weight: var(--font-weight-semibold);
+}
 
 /* -------------------- */
 /* Базові стилі */
@@ -277,11 +338,13 @@ body {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px -1px color-mix(in srgb, var(--primary) 25%, transparent);
 }
+
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--primary) 30%, transparent);
     background: linear-gradient(135deg, var(--color-primary-2-400), var(--color-primary-2-500));
 }
+
 .btn-secondary {
     background: transparent;
     color: var(--foreground);
@@ -291,6 +354,7 @@ body {
     border: 1px solid var(--border);
     transition: all 0.3s ease-in-out;
 }
+
 .btn-secondary:hover {
     background: var(--muted);
     border-color: var(--border);
@@ -298,10 +362,10 @@ body {
 
 /* --- SURFACES: локальні override'и тільки для конкретних секцій/лейаутів --- */
 [data-surface="landing-dark"] {
-    --background: #111113;   /* темний фон */
-    --foreground: #ffffff;   /* білий текст */
-    --border:     #343438;
-    --muted:      #222226;
+    --background: #111113; /* темний фон */
+    --foreground: #ffffff; /* білий текст */
+    --border: #343438;
+    --muted: #222226;
 
     /* акцент залишай свій */
     --primary: var(--color-primary-500);

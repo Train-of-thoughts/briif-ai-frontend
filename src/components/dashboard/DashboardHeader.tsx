@@ -57,7 +57,7 @@ export default function DashboardHeader({
               )}
             </button>
 
-            <Link href={`/${locale}`} className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src={logoIcon}
                 alt="Briff.ai Logo"
@@ -76,7 +76,7 @@ export default function DashboardHeader({
             >
               <div className="flex-shrink-0">
                 {user?.firstName ? (
-                  <div className="w-10 h-10 rounded-full bg-primary-1-600 flex items-center justify-center text-white font-semibold">
+                  <div className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center text-white font-semibold">
                     {user.firstName[0]}
                     {user.lastName ? user.lastName[0] : ""}
                   </div>
@@ -108,7 +108,7 @@ export default function DashboardHeader({
                 <div className="absolute right-0 mt-2 w-48 bg-neutral-800 rounded-md shadow-lg border border-neutral-700 z-20">
                   <div className="py-1">
                     <Link
-                      href={`/${locale}/dashboard/settings`}
+                      href={`/dashboard/settings`}
                       className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-neutral-700 hover:text-white"
                       onClick={closeDropdown}
                     >

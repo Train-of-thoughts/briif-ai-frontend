@@ -14,30 +14,21 @@ export default function DashboardLayout({
   const [isMenuExpanded, setIsMenuExpanded] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Check screen size to determine menu state
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      // Only change state when crossing breakpoints
       if (width >= 1024) {
-        // On desktop, default to expanded
         setIsMenuExpanded(true);
       } else if (width < 640) {
-        // On mobile, always collapse
         setIsMenuExpanded(false);
       }
-      // On tablet (640-1024px), we don't change the state automatically
-      // This allows users to keep their preference
     };
 
-    // Set initial state
     handleResize();
 
-    // Add event listener
     window.addEventListener('resize', handleResize);
 
-    // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 

@@ -8,7 +8,7 @@ export default function IntegrationsPage() {
 
   return (
     <div className="bg-neutral-800 rounded-lg shadow-lg p-6 md:p-8">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-primary-1-400">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-primary-400">
         {t("dashboard.menu.integrations", { fallback: "Integrations" })}
       </h1>
       
