@@ -13,6 +13,8 @@ const ukAuth = {
     noAccount: "Немає облікового запису?",
     signUp: "Зареєструватися",
     forgotPassword: "Забули пароль?",
+    genericError: "Під час входу сталася помилка",
+    useGoogleLogin: "Будь ласка, використовуйте вхід через Google для цього облікового запису",
   },
 
   // Signup page

@@ -50,12 +50,20 @@ const LoginForm: React.FC = () => {
         // Redirect to dashboard or home page after successful login
         router.push("/");
       } else {
-        setAuthError(result.error || t("login.genericError"));
+        // Check for specific error message "User password is not set"
+        if (result.error === "User password is not set") {
+          // This user needs to login with Google
+          setAuthError(t("login.useGoogleLogin") || "Please use Google login for this account");
+          // Optional: automatically redirect to Google login after a short delay
+          // setTimeout(() => handleGoogleLogin(), 3000);
+        } else {
+          setAuthError(result.error || t("login.genericError") || "An error occurred during login");
+        }
       }
     } catch (error) {
       console.error("Login error:", error);
       setAuthError(
-        error instanceof Error ? error.message : t("login.genericError"),
+        error instanceof Error ? error.message : (t("login.genericError") || "An error occurred during login"),
       );
     } finally {
       setIsSubmitting(false);

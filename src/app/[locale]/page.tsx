@@ -6,7 +6,7 @@ import AboutSection from "@/components/landing/AboutSection";
 
 export default function Home() {
   return (
-    <main className="pt-16 sm:pt-20 md:pt-24">
+    <main data-surface="landing-dark" className="bg-app text-app pt-16 sm:pt-20 md:pt-24">
       <Header />
       <HeroSection />
       <FeaturesSection />

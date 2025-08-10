@@ -8,6 +8,7 @@ const csCommon = {
     signUp: "Registrovat se",
     dashboard: "Nástěnka",
     logout: "Odhlásit se",
+    accountSettings: "Nastavení účtu",
   },
 
   // Footer
@@ -34,6 +35,75 @@ const csCommon = {
     firstName: "Jméno",
     lastName: "Příjmení",
     userId: "ID uživatele",
+    subscription: "Bezplatný plán",
+    menu: {
+      dashboard: "Nástěnka",
+      calendar: "Kalendář publikací",
+      integrations: "Integrace",
+      settings: "Nastavení",
+      openMenu: "Otevřít menu",
+      closeMenu: "Zavřít menu",
+      expandMenu: "Rozbalit menu",
+      collapseMenu: "Sbalit menu",
+    },
+  },
+
+  // Under Development
+  underDevelopment: {
+    title: "Funkce ve vývoji",
+    message: "Usilovně pracujeme na tom, abychom vám tuto funkci přinesli. Prosím, zkontrolujte to brzy!",
+  },
+
+  // Settings
+  settings: {
+    title: "Nastavení",
+    sections: "Sekce",
+    save: "Uložit",
+    reset: "Resetovat",
+
+    profile: {
+      title: "Profil",
+      firstName: "Jméno",
+      lastName: "Příjmení",
+      email: "E-mail",
+      firstNamePlaceholder: "Zadejte své jméno",
+      lastNamePlaceholder: "Zadejte své příjmení",
+      emailPlaceholder: "Zadejte svůj e-mail",
+    },
+
+    security: {
+      title: "Zabezpečení",
+    },
+
+    system: {
+      title: "Systémová nastavení",
+    },
+
+    data: {
+      title: "Odstranění dat",
+    },
+
+    payment: {
+      title: "Platební údaje",
+    },
+
+    development: {
+      title: "Tato sekce je ve vývoji",
+      message: "Pracujeme na této funkci a brzy bude k dispozici.",
+    },
+
+    unsavedChanges: {
+      title: "Neuložené změny",
+      message: "Máte neuložené změny, které budou ztraceny, pokud přejdete pryč. Chcete pokračovat?",
+      continue: "Pokračovat bez uložení",
+      cancel: "Zůstat na této stránce",
+    },
+  },
+
+  // Modal
+  modal: {
+    cancel: "Zrušit",
+    continue: "Pokračovat",
   },
 
   // Metadata

@@ -34,8 +34,8 @@ export default async function middleware(request: NextRequest) {
   // Get the full URL including search params
   const fullUrl = request.nextUrl.toString();
 
-  // Special handling for sitemap.xml and robots.txt
-  if (pathname === "/sitemap.xml" || pathname === "/robots.txt") {
+  // Special handling for sitemap.xml, robots.txt, and API routes
+  if (pathname === "/sitemap.xml" || pathname === "/robots.txt" || pathname.startsWith("/api")) {
     return NextResponse.next();
   }
 
@@ -69,6 +69,6 @@ export default async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Match all paths except for specific excluded ones
-    "/((?!_next/static|_next/image|favicon.ico).*)",
+    "/((?!_next/static|_next/image|favicon.ico|api/).*)",
   ],
 };
