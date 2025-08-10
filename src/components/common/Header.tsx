@@ -10,7 +10,7 @@ export default function Header() {
   const t = useTranslations("common");
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-500 bg-opacity-10 backdrop-blur-sm border-b border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#33333325] backdrop-blur-sm border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between items-center py-4 md:py-5">
           <div className="flex items-center">
